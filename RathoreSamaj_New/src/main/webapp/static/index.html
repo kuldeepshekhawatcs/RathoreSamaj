@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>MyProject</title>
+<link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="styles/searchStyle.css" rel="stylesheet">
+<link href="styles/new-sm-style.css" rel="stylesheet">
+<link href="styles/style.css" rel="stylesheet">
+
+</head>
+<body>
+<div class='main'> 
+<div class='container'>
+	<div class="row" id="home-menu-container">
+				<div class="header-container">
+
+						<nav class="navbar navbar-default" id="home-menu">
+							<div class="container-fluid">
+								<div class="navbar-header">
+								<div class="logo-wrap pull-left"> 
+							      	<div class="logo-div"><img src="images/logo.png"></div>
+						      	</div>	
+								</div>
+							</div>
+						</nav>
+    				</div>
+	</div>
+<div class="row" id="homeNavbar">
+								    <ul class="nav navbar-nav">
+								        <li>
+								        	<a href="#/home">Home</a>
+								        </li>
+								        <li>
+								        	<a href="#/aboutus">About Us</a>
+							        	</li>
+								        <li>
+								        	<a href="#/register">Register</a>
+								        </li>
+								        <li>
+								        	<a href="#/mission">Mission</a>
+								        </li>
+								    </ul>
+								</div>
+			<div class="row">
+				<div class="col-md-10">
+					<div ng-view></div>
+				</div>
+				<div class="col-md-2" style="border: 1px solid;border-color: black; height: 500px">
+					<div class="advertisement">Advertisement block
+					<marquee behavior="scroll" direction="down" class="advertisement">
+					<img src="images/logo.jpg" class="advertisementimagesize" alt="Flying Bat">
+					<img src="images/logo.jpg" class="advertisementimagesize" alt="Flying Bat">
+					<img src="images/logo.jpg" class="advertisementimagesize" alt="Flying Bat">
+					</marquee>
+					
+					
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+<div>
+		<div data-ng-include='"./html/home/footer.html"'></div>
+</div>
+<script type="text/javascript" src="generic/angular.min.js"></script>
+<script type="text/javascript" src="generic/angular-route.min.js"></script>
+<script type="text/javascript" src="generic/angular-resource.min.js"></script>
+<script type="text/javascript" src="lib/ng-file-upload-shim.min.js"></script>
+<script type="text/javascript" src="lib/ng-file-upload.min.js"></script>
+<!-- Main App -->
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/route.js"></script>
+
+<!-- Service Area -->
+<script type="text/javascript" src="js/model/registerFactory.js"></script>
+<script type="text/javascript" src="js/model/homeFactory.js"></script>
+<script type="text/javascript" src="js/model/fileUploadService.js"></script>
+
+<!-- Controller Area -->
+<script type="text/javascript" src="js/controller/homeController.js"></script>
+<script type="text/javascript" src="js/controller/aboutUsController.js"></script>
+<script type="text/javascript" src="js/controller/registerController.js"></script>
+<script type="text/javascript" src="js/controller/missionController.js"></script>
+</body>
+</html>

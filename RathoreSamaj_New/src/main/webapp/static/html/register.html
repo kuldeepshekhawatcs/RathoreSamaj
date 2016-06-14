@@ -1,0 +1,244 @@
+<div class="col-md-12 main-content">
+ <h3 class="fleft">
+	Registration
+		</h3>
+		<div class="registerFormContent">
+<form class="form-horizontal" name="registerForm" novalidate>
+		<div class="panelStyle">
+			<div class="row">
+				<div class="col-md-12 rowDiv">
+					<div class="form-group required">
+						<label class="col-md-4 control-label">First Name : </label>
+						<div class="col-md-5">
+							<input type="text" class="form-control"
+								ng-model="input.firstName" />
+						</div>
+					</div>
+
+					<div class="form-group required">
+						<label class="col-md-4 control-label">Middle Name : </label>
+						<div class="col-md-5">
+							<input type="text" class="form-control"
+								ng-model="input.middleName" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-4 control-label">Last Name : </label>
+						<div class="col-md-5">
+							<input type="text" class="form-control"
+								ng-model="input.lastName" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-4 control-label ">Gender : </label>
+						<div class="col-md-5 radiobutton">
+						<label><input name="genderSelect" value="M" type="radio" ng-model="input.gender"/> Male</label>
+						<label><input name="genderSelect" value="F" type="radio" ng-model="input.gender"/> Female</label>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-md-4 control-label ">Status : </label>
+						<div class="col-md-5 radiobutton">
+						<label><input name="statusSelect" value="S" type="radio" ng-model="input.maritalStatus"/> Single</label>
+						<label><input name="statusSelect" value="M" type="radio" ng-model="input.maritalStatus"/> Married</label>
+						</div>
+					</div>
+					
+					<div class="form-group required">
+						<label class="col-md-4 control-label">Religion :</label>
+						<div class="col-md-5">
+							<select class="form-control" ng-model="input.religion" required>
+								<option value="" >--Select---</option>
+								<option value="hindu" >Hindu</option>
+								<option value="jain" >Jain</option>
+								<option value="muslim" >Muslim</option>
+								<option value="buddhism" >Buddhism</option>
+								<option value="christian" >Christian</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="form-group required">
+						<label class="col-md-4 control-label">Age : </label>
+						<div class="col-md-5">
+							<input type="text" class="form-control"
+								ng-model="input.age" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-4 control-label">D.O.B. :</label>
+						<div class="col-md-8 nopadding">
+						<div class="col-md-2" style="padding-left: 5px;margin-left: 10px;">
+							<select class="form-control" style="padding-left: 15px" ng-model="date"
+								ng-options="date.value as date.value for date in dateList"	required>
+								<option value="" selected>DD</option>
+							</select></div> <label class="col-md-1 control-label nopadding leftLabel">DD</label>
+							
+							<div class="col-md-2 nopadding" style="padding-right: 18px;"><select class="form-control" ng-model="month"
+								ng-options="month.value as month.value for month in monthList" required>
+								<option value="" selected>MM</option>
+							</select></div> <label class="col-md-1 control-label nopadding leftLabel">MM</label>
+							<div class="col-md-2 nopadding" style="padding-right: 09px;"><select class="form-control" ng-model="year"
+								ng-options="year.value as year.value for year in yearList" required>
+								<option value="" selected>YYYY</option>
+							</select></div> <label class="control-label nopadding leftLabel">YYYY</label>
+						</div>
+					</div>
+				<!-- </div>
+
+				<div class="col-md-6"> -->
+					<div class="form-group">
+						<label class="col-md-4 control-label">Mobile No. : </label>
+						<div class="col-md-5">
+							<input type="text" class="form-control"
+								ng-model="input.candidateMobileNumber" />
+						</div>
+					</div>
+
+					<div class="form-group required">
+						<label class="col-md-4 control-label">Alternate Mobile No. :</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control"
+								ng-model="input.parentMobileNumber" />
+						</div>
+					</div>
+
+					<div class="form-group required">
+						<label class="col-md-4 control-label">Address :</label>
+						<div class="col-md-5">
+							<textarea id="address" 
+								class="form-control" ng-model="input.address" rows="3"
+								maxlength="100" ></textarea>
+						</div>
+					</div>
+
+					<div class="form-group required">
+						<label class="col-md-4 control-label">City :</label>
+						<div class="col-md-5">
+							<select class="form-control" ng-model="input.location" required>
+								<option value="" >--Select---</option>
+								<option value="Bhopal" >Bhopal</option>
+								<option value="Chittorgarh" >Chittorgarh</option>
+								<option value="Dewas" >Dewas</option>
+								<option value="Gwalior" >Gwalior</option>
+								<option value="Indore" >Indore</option>
+								<option value="Jabalpur" >Jabalpur</option>
+								<option value="Katni" >Katni</option>
+								<option value="Neemach" >Neemach</option>
+								<option value="Ratlam" >Ratlam</option>
+								<option value="Ujjain" >Ujjain</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group required">
+						<label class="col-md-4 control-label">Education :</label>
+						<div class="col-md-5">
+							<select class="form-control" ng-model="input.education" required>
+								<option value="" >--Select---</option>
+								<option value="PG" >Post Graduate</option>
+								<option value="G" >Graduate</option>
+								<option value="UG" >Under Graduate</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group required">
+						<label class="col-md-4 control-label">Occupation :</label>
+						<div class="col-md-5 radiobutton">
+							<label><input name="occupationSelect" value="Profession" type="radio" ng-model="input.occupation"/> Profession</label>
+							<label><input name="occupationSelect" value="Business" type="radio" ng-model="input.occupation"/> Business</label>
+							<label><input name="occupationSelect" value="Employment" type="radio" ng-model="input.occupation"/> Employment</label>
+						</div>
+					</div>
+
+					<div class="form-group required">
+						<label class="col-md-4 control-label">Annual Income :</label>
+						<div class="col-md-5">
+							<select class="form-control" ng-model="input.annualIncome" required>
+								<option value="" >--Select---</option>
+								<option value="<50k" >below ₹ 50,000</option>
+								<option value="50k-2l" >₹ 50,000-2,00,000</option>
+								<option value="2l-5l" >₹ 2,00,000-5,00,000</option>
+								<option value="5l-8l" >₹ 5,00,000-8,00,000</option>
+								<option value="8l-12l" >₹ 8,00,000-12,00,000</option>
+								<option value=">12l" >above ₹12,00,000</option>
+							</select>
+						</div><label class="control-label">per annum</label>
+					</div>
+					
+					<div class="form-group required">
+						<label class="col-md-4 control-label">Personel Details :</label>
+					</div>
+					
+					<div class="form-group required">
+						<label class="col-md-4 control-label">Height : </label>
+						<div class="col-md-5">
+							<input type="text" class="form-control"
+								ng-model="input.height" />
+						</div>
+					</div>
+					<div class="form-group required">
+						<label class="col-md-4 control-label">LifeStyle : </label>
+						<div class="col-md-5">
+							<input type="text" class="form-control"
+								ng-model="input.lifeStyle" />
+						</div>
+					</div>
+					<div class="form-group required">
+						<label class="col-md-4 control-label">Language : </label>
+						<div class="col-md-5">
+							<select class="form-control" ng-model="input.language" required>
+								<option value="" >--Select---</option>
+								<option value="hindi" >Hindi</option>
+								<option value="english" >English</option>
+								<option value="marthi" >Marathi</option>
+								<option value="gujrati" >Gujrati</option>
+								<option value="punjabi" >Punjabi</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group required">
+						<label class="col-md-4 control-label">Diet : </label>
+						<div class="col-md-5">
+							<label class="col-md-3"><input name="dietSelect" value="veg" type="radio" ng-model="input.diet"/> Veg</label>
+							<label class="col-md-4"><input name="dietSelect" value="jainveg" type="radio" ng-model="input.diet"/> Jain-Veg</label>
+							<label class="col-md-4"><input name="dietSelect" value="nonveg" type="radio" ng-model="input.diet"/> Non-veg</label>
+							<label class="col-md-4"><input name="dietSelect" value="eggveg" type="radio" ng-model="input.diet"/> Eggterian</label>
+						</div>
+					</div>
+					<div class="form-group required">
+						<label class="col-md-4 control-label">Complexion : </label>
+						<div class="col-md-5 radiobutton">
+							<label class="col-md-4"><input name="skinSelect" value="white" type="radio" ng-model="input.complexion"/> White</label>
+							<label class="col-md-4"><input name="skinSelect" value="wheatish" type="radio" ng-model="input.complexion"/> Wheatish</label>
+							<label class="col-md-4"><input name="skinSelect" value="black" type="radio" ng-model="input.complexion"/> Black</label>
+						</div>
+					</div>
+			</div>
+					<div class="col-md-12 rowDiv">
+						<div class="form-group required">
+							<label class="col-md-4 control-label">Profile Picture :</label> 
+							<div class="col-md-8">
+							<input
+								type="file" ngf-select="" ng-model="picFile" name="file"
+								ngf-accept="'image/*'"> <img ngf-src="picFile"
+								class="thumb">
+								</div>
+						</div>
+					</div>
+			</div>
+		</div>
+<br class="clear">
+<div class="clearfix marginTop20">
+	<div class="fright">
+		<button class="callToAction" ng-click="save()">Save</button>
+	</div>
+</div>
+</form>
+</div>
+</div>

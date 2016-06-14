@@ -1,0 +1,120 @@
+body{ margin:auto; font-family: "Open Sans", arial !important;}
+.clr{ clear:both}
+ul, h1, h2, h3, h4, h5, h6, p, form, table{ margin:0; padding:0; font-weight:normal;}
+li{ list-style:none}
+a{ text-decoration:none;}
+a img{ border:none}
+.fl{ float:left}
+.fr{ float:right}
+.vspacer30{ padding-top:30px}
+.vspacer5{ padding-top:5px}
+/*header start */
+.top-header{background:#323232; width:100%; height:52px; position:fixed; top:0px; z-index:9999}
+.top-header-in{ width:1002px; margin:auto; position:relative}
+.news-sm-tp-rgt{ font-size:13px; color:#fff; padding-top:15px}
+.news-sm-tp-rgt a{ font-size:13px; color:#fff}
+/*header end */
+
+/*sprite start */
+.new-sm-sprite{ display:block; background:url(../images/sm-hp-sprite.png) no-repeat -283px -52px; width:222px; height:40px; margin-top:4px}
+.new-sm-sprite.sm-logo {width: 278px;height: 124px;margin-top: 0px;margin: auto;float: none !important;background-position: 0px 0px;}
+.new-sm-sprite.sm-login {width: 109px;height:46px;margin-top:1px;float: right; background-position:-286px 0px;}
+.new-sm-sprite.sm-register {width:133px;height:46px; margin-top:1px;float: right; background-position:-398px 0px; margin-left:5px}
+.new-sm-sprite.lft-txt {width:224px;height:78px; margin-top:1px; position:absolute; background-position:0px -132px; top:40px; left:50px}
+.new-sm-sprite.rgt-txt {width:268px;height:96px; margin-top:1px; position:absolute; background-position:-242px -132px; top:40px; right:50px}
+.new-sm-sprite.more{width:20px;height:20px; background-position:-394px -105px; margin:0px 0px 5px 5px}
+.new-sm-sprite.cmnt1{width:22px;height:22px; background-position:-319px -104px; margin:0px 0px 5px 5px}
+.new-sm-sprite.cmnt2{width:22px;height:22px; background-position:-346px -105px; margin:0px 0px 5px 5px}
+.new-sm-sprite.cmnt3{width:26px;height:20px; background-position:-285px -104px; margin:0px 0px 5px 5px}
+.new-sm-sprite.mrnri{width:18px;height:18px; background-position:-374px -104px; margin:0px 5px 5px 5px}
+
+/*sprite start */
+
+
+/*css3 transitions and fonts start */
+.wrapper{position:relative; top:40px;}
+.main-wrapper{ background:#eeeeee;  height:730px; border-bottom:1px solid #e5e5e5;}
+.main-wrapper-in{width:1002px; margin:auto;  position:relative;}
+.search-form{position:relative;}
+.search-form-left{padding:11px; margin-left: 8px;overflow:hidden; background:#b51d22; opacity:0.9; color:#ffffff; text-transform:uppercase}
+.search-form-left h2{font-size:18px; float:left; text-align:right; font-weight:normal; line-height:20px; margin:20px 0 0 0 }
+.srch-slct{ font-size:14px; float: left;line-height: 20px; margin:14px 0 0 8px}
+.srch-slct label{ float:left; padding-bottom:8px}
+.srch-slct input[type="radio"]{ width:20px; height:20px; float:left}
+.search-form-right{ width:752px;  height:98px; overflow:hidden; background:#323232; color:#ffffff; font-size:13px; text-transform:uppercase}
+.search-form-right label{ border-right:1px solid #3c3c3c; border-left:1px solid #262626; padding:15px 10px; float:left; height:68px; text-align:left}
+.search-form-right label:first-child{ border-left:none}
+.search-form-right label:last-child{ border-right:none; text-align:right}
+.select-style{ background:#eeeeee url(../images/new-sm-select-bg.png) no-repeat 94% 50%; border:none; width:93px; height:40px; float:left;   font-size:14px; color:#5d5d5d; border-radius:1px; margin-top:8px}
+.select-style select{ background:none; border:none; width:93px; height:40px; padding:10px; font-size:14px; color:#5d5d5d; appearance: none; -moz-appearance: none; -webkit-appearance: none; text-indent: 0.01px; text-overflow: "";  }
+.select-style2{ background:#eeeeee url(../images/new-sm-select-bg1.png) no-repeat 90% 50%; border:none; width:45px; height:40px; float:left;   font-size:14px; color:#5d5d5d; border-radius:1px; margin-top:8px}
+.select-style2 select{ background:none; border:none; width:45px; height:40px; padding:10px 0px 10px 5px; font-size:14px; color:#5d5d5d; appearance: none; -moz-appearance: none; -webkit-appearance: none; text-indent: 0.01px;text-overflow: "";  }
+.brws{position:relative; top:430px}
+.brws-first{ font-size:18px; color:#000; text-transform:uppercase; line-height:20px; text-align:left}
+.brws-first span{color:#af1c21;}
+.brws-second{font-size:12px; color:#5d5d5d;  padding:5px 20px 0 20px}
+.brws-second a{font-size:12px; color:#5d5d5d;}
+.brws-second a:hover{color:#000;}
+.brws-second span{ font-size:13px; color:#000; padding-right:5px}
+.brws-third{line-height: 13px;padding-top: 24px; text-align:left}
+.brws-third a{ font-size:15px; color:#000;}
+.brws-third a span{ font-size:13px; color:#5d5d5d;}
+.success-story{position:relative;  padding-bottom:50px; width:1002px; margin:auto; padding-top:50px}
+.success-story-left{float: left; width:250px; color:#373737; font-size:14px; line-height:16px; text-align:left}
+.success-story-left h2{ font-size:40px; color:#000; text-transform:uppercase; line-height:38px; margin-bottom:10px}
+.success-story-left h2 span{color:#ad1e23;}
+.photo{ width:100%;  position:relative; top:0px; bottom:0px; left:0px;  border-radius:100%; }
+.photo img{ width:100%; border-radius:100%; opacity:0.8; border:4px solid #fff }
+.photo:hover img{opacity:1; border:4px solid #b1b0b0 }
+.txt{ position:absolute;width:250px; height:150px;  opacity:0;  left:-50px; top:0px; border-radius:2px;  border:2px solid #b1b0b0; text-align:left; padding-bottom:10px}
+p{ font:normal 12px/18px arial; color:#222; margin:0px; padding:20px;}
+.photo:hover .txt{ background:#ffffff; opacity:1; transition:all 1s ease-in-out; -moz-transition:all 1s ease-in-out; -webkit-transition:all 1s ease-in-out; top:-173px; }
+.more2{background:#ffb487; border-radius:15px; height:18px; width:60px; text-decoration:none; text-align:center; line-height:18px;  font:bold 12px arial; color:#333; display:block; position:absolute; left:70px; bottom:20px; }
+.success-story-right{width:750px; float:left; position:relative; }
+.success-story-right li{float:left; margin-left:20px;  width:130px; position:relative; font-size: 13px; color:#000; text-align: center;line-height: 30px;}
+.success-story-right li:last-child{ margin-right:0px;}
+.card{position:relative;}
+.brdr{width:3px; height:120px; background:#a2a2a2; margin:auto}
+.same-css{ overflow: hidden; position: absolute; -webkit-backface-visibility: hidden; z-index:999; width: 314px; height: 314px;  overflow:hidden; left:50%; margin:0px 0px 0px -157px;}
+.front{-webkit-animation:front 6s infinite; }
+.back{-webkit-transform: rotateY(180deg); -webkit-animation:back 6s infinite; } 
+
+.styled-select select{ width:100% !important}  
+@-moz-keyframes front
+{
+0% {-webkit-transform: rotateY(180deg) ;-webkit-animation:back 5s infinite;}
+50% {-webkit-transform: rotateY(180deg) ;-webkit-animation:back 5s infinite;}
+100% {-webkit-transform: rotateY(-180deg) ;-webkit-animation:back 5s infinite;}
+}
+@-webkit-keyframes front
+{
+0% {-webkit-transform: rotateY(180deg) ;-webkit-animation:back 5s infinite;}
+50% {-webkit-transform: rotateY(180deg) ;-webkit-animation:back 5s infinite;}
+100% {-webkit-transform: rotateY(-180deg) ;-webkit-animation:back 5s infinite;}
+}
+
+@-webkit-keyframes back{
+0% {-webkit-transform: rotateY(0deg) ; -webkit-animation:back 5s infinite;}
+50% {-webkit-transform: rotateY(0deg) ; -webkit-animation:back 5s infinite;}
+100% {-webkit-transform: rotateY(360deg);-webkit-animation:back 5s infinite;}
+}
+@-moz-keyframes back{
+0% {-webkit-transform: rotateY(0deg) ; -webkit-animation:back 5s infinite;}
+50% {-webkit-transform: rotateY(0deg) ; -webkit-animation:back 5s infinite;}
+100% {-webkit-transform: rotateY(360deg);-webkit-animation:back 5s infinite;}
+}
+
+.first{width: 100%; height: 620px;background: url('../images/new-sm-img1.jpg')  no-repeat bottom center; -webkit-animation-name: test; -webkit-animation-duration: 5s;-webkit-animation-direction: alternate; -webkit-animation-timing-function: linear; -moz-animation-name: test; -moz-animation-duration: 5s;-moz-animation-direction: alternate; -moz-animation-timing-function: linear; }
+
+@-webkit-keyframes test {
+0% {background: url('../images/new-sm-img2.jpg')  no-repeat bottom center;}
+25% {background: url('../images/new-sm-img2.jpg')  no-repeat bottom center;}
+50% {background: url('../images/new-sm-img2.jpg')  no-repeat bottom center;}
+75% {background: url('../images/new-sm-img2.jpg')  no-repeat bottom center;}
+100% {background: url('../images/new-sm-img1.jpg')  no-repeat bottom center;}
+}
+.opensans-light{font-family: "OpenSans-Light" !important;}
+@font-face { font-family: 'OpenSans-Light';    src: url('OpenSans-Light.ttf');  font-weight: 200;  font-style: normal;}
+@font-face {font-family: 'OpenSans-Bold';    src: url('OpenSans-Bold.ttf');  font-weight: bold; font-style: normal;}
+@font-face {    font-family: 'OpenSans-Regular';    src: url('OpenSans-Regular.ttf');    font-weight: normal;font-style: normal;}
+/*css3 transitions and fonts end */

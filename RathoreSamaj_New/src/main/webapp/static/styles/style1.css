@@ -1,0 +1,947 @@
+/* -------------------------------------------
+Design Name: SimplyMarry all popups
+Design URI: http://www.SimplyMarry.com/
+Html Conversion by: Himanshu Gupta
+------------------------------------------- */
+* { margin:0; padding:0; border:0; }
+
+body {
+	font-family: 'Oxygen', sans-serif; color:#474747;
+	background:#fff;
+}
+p {
+	color:#474747; line-height:normal;
+}
+
+/* HELPERS
+------------------------------------------- */
+.fl {
+	float:left!important;
+}
+.fr {
+	float:right!important;
+}
+.clb {
+	clear:both;
+}
+.cll {
+	clear:left;
+}
+.clr {
+	clear:right;
+}
+textarea{resize:none; overflow:auto;}
+
+/* MESSAGING POPUPS CSS START HERE
+------------------------------------------- */
+/*----- photo upload popup step 1 css -----*/
+.photoupload_wrapper{width:595px; margin:0 auto; background:#fff; color:#4a4a4a; padding:15px; border:1px solid #f2f2f2; overflow:hidden;}
+.photoupload_wrapper p{font-size:12px; margin:0 0 0 0; line-height:16px;}
+.photoupload_wrapper .rghtphoto{width:395px;}
+.photoupload_wrapper .rghtphoto .phototop{width:395px; height:7px; background:url(/images/pophotoupload_tbbg.png) no-repeat 0 0; line-height:7px;}
+.photoupload_wrapper .rghtphoto .photobtm{width:395px; height:7px; background:url(/images/pophotoupload_tbbg.png) no-repeat 0 -8px; line-height:7px;}
+.photoupload_wrapper .rghtphoto .photomid{width:387px; background:url(/images/pophotoupload_midbg.png) repeat-y 0 0; padding:5px 3px 5px 5px;}
+.photoupload_wrapper .rghtphoto .photomid2{width:371px; background:url(/images/pophotoupload_midbg.png) repeat-y 0 0; padding:5px 12px;}
+.photomid .dfltmalepic{width:145px; height:180px; background:url(/images/male_dflt_photo.png) no-repeat;}
+.photomid .dfltfemalepic{width:145px; height:180px; background:url(/images/female_dflt_photo.png) no-repeat;}
+.photomid p{float:left; margin:5px 0 0 1px; font-size:11px;}
+.photomid form{width:234px; float:left; margin:15px 0 0 1px;}
+.photomid form span{font-size:10px; color:#929292; padding:2px 0 0 0; float:left;}
+.photomid form span a{color:#000; text-decoration:none;}
+.photomid .upld_btn{margin:18px 0 0 1px;}
+.phinfomrgn{margin:25px 0 0 0;}
+.photomid2 h4{font-size:12px;}
+.photomid2 span{width:300px; font-size:11px; margin:15px 0 0 0; float:left; line-height:14px;}
+.photomid2 span a{font-size:10px; color:#006599; text-decoration:underline; font-weight:bold;}
+.photomid2 span a:hover{color:#006599; text-decoration:none; font-weight:bold;}
+.photomid2 img{float:left;}
+.photomid2 ul{width:365px; margin:3px 0 5px 0; float:left; padding:0;}
+.photomid2 ul li{font-size:11px; color:#777; clear:both; list-style-type:none; background:url(/images/popphoto_bulet.png) no-repeat left center; padding:0 0 3px 10px; line-height:13px;}
+.photomid2 ul li.li2{list-style-type:none; padding:0 0 3px 0; background:none;}
+.photomid2 p{float:left; font-size:10px; margin:0; width:300px; line-height:13px;}
+.phbltimgmrgn{margin:4px 5px 0 0;}
+/*-- phototip css --*/
+.photoupload_wrapper .phototip{width:168px;}
+.phototip .tiptop{width:168px; height:41px; background:url(/images/phototips_bg.png) no-repeat 0 0;}
+.phototip .tipbtm{width:168px; height:10px; background:url(/images/phototips_bg.png) no-repeat 0 -42px; line-height:10px;}
+.phototip .tipmid{width:151px; background:#fff; border-left:1px solid #dadada; border-right:1px solid #dadada; padding:0 0 0 15px;}
+.tipmid .tiphead{margin:6px 0 0 5px; height:15px; width:140px; display:inline;}
+.tiphead p{font-size:11px!important; float:left!important; margin:0; padding:2px 5px 0 0;}
+.tiphead p.corctip{color:#008b1d;}
+.tiphead p.erortip{color:#008b1d;}
+.tiphead img{float:left;}
+.tipmid ul{width:140px; float:left;}
+.tipmid ul li{width:59px; float:left; padding:6px 5px 11px 5px; list-style-type:none;}
+.tipmid ul li img{float:left;}
+.tipmid ul li span{font-size:10px; padding:2px 0 0 0; color:#9b9b9b; float:left; text-align:center; width:59px;}
+.tipbordr_btm{border-bottom:1px dotted #474747;}
+
+/*----- photo upload popup step 2 and 3 css -----*/
+.photoupload_wrapper .crophotodtail {
+    width: 161px;
+}
+.crophotodtail span {
+    float: left;
+    font-size: 11px;
+    padding: 10px 0 7px;
+    text-align: center;
+    width: 157px;
+}
+.crophotodtail .largpreviw {
+    display: inline;
+    margin: 0 0 0 5px;
+    width: 161px;
+}
+.largpreviw .lprvwtopbg {
+    background: url("/images/lrg_previw_tbbg.png") no-repeat scroll 0 0 transparent;
+    height: 12px;
+    line-height: 12px;
+    width: 161px;
+}
+.largpreviw .lprvwbtmbg {
+    background: url("/images/lrg_previw_tbbg.png") no-repeat scroll 0 -12px transparent;
+    height: 12px;
+    line-height: 11px;
+    width: 161px;
+}
+.largpreviw .lprvwmidbg {
+    background: url("/images/lrg_previw_midbg.png") repeat-y scroll 0 0 transparent;
+    padding: 0 0 0 9px;
+    width: 152px;
+}
+.lprvwmidbg .prvwimgshow {
+    height: 188px;
+    width: 142px;
+}
+.crophotodtail .thmbpreviw {
+    display: inline;
+    margin: 0 0 0 45px;
+    width: 66px;
+}
+.thmbpreviw .tprvwtopbg {
+    background: url("/images/thmb_previw_tbbg.png") no-repeat scroll 0 0 transparent;
+    height: 9px;
+    line-height: 9px;
+    width: 66px;
+}
+.thmbpreviw .tprvwbtmbg {
+    background: url("/images/thmb_previw_tbbg.png") no-repeat scroll 0 -10px transparent;
+    height: 9px;
+    line-height: 9px;
+    width: 66px;
+}
+.thmbpreviw .tprvwmidbg {
+    background: url("/images/thmb_previw_midbg.png") repeat-y scroll 0 0 transparent;
+    padding: 0 0 0 9px;
+    width: 57px;
+}
+.tprvwmidbg .tprvwimgshow {
+    height: 72px;
+    width: 49px;
+}
+.crophotodtail p {
+    float: left;
+    font-size: 11px;
+    line-height: 14px;
+    margin: 0;
+    padding: 18px 0;
+    text-align: justify;
+    width: 100%;
+}
+.crophotodtail .photosubmt {
+    display: inline;
+    margin: 0 0 0 40px;
+    width: 45px;
+}
+.crophotodtail .slctalbmloc {
+    border: 1px solid #7F9DB9;
+    clear: left;
+    display: inline;
+    font-size: 11px;
+    height: 18px;
+    margin: 0 0 10px 13px;
+    width: 130px;
+}
+.crophotodtail .photostartobtn {
+    margin: 0 0 0 10px;
+}
+.photoupload_wrapper .crophotosctn {
+    border: 1px solid #F0F0F0;
+    margin: 0 0 0 10px;
+    width: 418px;
+}
+
+.pdpalbm_pop {
+    background: none repeat scroll 0 0 #fff;
+  
+    margin: 0 auto;
+    overflow:  visible !important;
+    width: 500px;
+}
+.pdpalbm_pop .pdptopdiv {
+    padding: 5px 5px 15px;
+    width: 500px;
+}
+.pdptopdiv .pdpclosdiv {
+    height: 14px;
+    width: 500px;
+}
+.pdpclosdiv a {
+    background: url("/images/pdpalbm_clos.gif") no-repeat scroll 100% 0 transparent;
+    color: #3A3A3A;
+    float: right;
+    font-size: 11px;
+    height: 14px;
+    line-height: 14px;
+    text-decoration: none;
+    width: 50px;
+}
+.pdpclosdiv a:hover {
+    background: url("/images/pdpalbm_clos.gif") no-repeat scroll 100% -15px transparent;
+    color: #D1D1D1;
+    height: 14px;
+    line-height: 14px;
+    text-decoration: none;
+    width: 50px;
+}
+.pdptopdiv .pdplarow {
+    float: left;
+    height: 25px;
+    margin: 212px 25px 0 0;
+    width: 20px;
+}
+.pdptopdiv .pdpr {
+    margin: 212px 0 0 25px !important;
+}
+.pdptopdiv .pdpimgviw {
+    height: 425px;
+    padding: 20px 0 15px 0;
+    text-align: center;
+    width: 500px;
+}
+.pdpalbm_pop .pdpbtmdiv {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 80px;
+    width: 500px;
+}
+.pdpinfo {
+    padding: 0 15px;
+}
+.pdpinfo h6 {
+    color: #006599;
+    float: left;
+    font-size: 13px;
+    padding: 14px 0 0;
+}
+.pdpinfo p {
+    color: #111;
+    font-size: 15px;
+    overflow: hidden;
+    padding: 20px 0 0px 0;
+	text-align:center
+}
+.pdpinfo p a {
+    color: #006599;
+    text-decoration: none;
+}
+.pdpinfo p a:hover {
+    text-decoration: underline;
+}
+.pdpbtmdiv .pdptabs {
+position: absolute;
+left: -80px;
+top: 0px;
+background: #b51d22;
+width: 80px;
+z-index:9999
+}
+.pdptabs ul {
+ 
+}
+.pdptabs ul li {
+   color: #fff;
+  font-size: 14px;
+list-style-type: none;
+padding: 42px 12px 20px 12px;
+text-align: center;
+line-height: 18px;
+position:relative;
+
+}
+.pdptabs ul li:nth-child(1){background:#b51d22 url(/images/sp1-hr.png) no-repeat 32px 18px;}
+.pdptabs ul li.pdpactab:nth-child(1){background:#fff url(/images/sp1.png) no-repeat 32px 18px; color: #b51d22 !important; margin:0PX -5PX 0PX 0PX; left: -5PX; }
+
+.pdptabs ul li:nth-child(2){background:#b51d22 url(/images/sp2-hr.png) no-repeat 32px 18px;}
+.pdptabs ul li.pdpactab:nth-child(2){background:#fff url(/images/sp2.png) no-repeat 32px 18px; color: #b51d22 !important;  margin:0PX -5PX 0PX 0PX; left: -5PX;}
+
+.pdptabs ul li:nth-child(3){background:#b51d22 url(/images/sp3-hr.png) no-repeat 32px 18px;}
+.pdptabs ul li.pdpactab:nth-child(3){background:#fff url(/images/sp3.png) no-repeat 32px 18px; color: #b51d22 !important;  margin:0PX -5PX 0PX 0PX; left: -5PX;}
+
+.pdptabs ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.pdptabs ul li:hover {
+    color: #b51d22;
+    text-decoration: none;
+}
+
+/*----- email and mobile verification popup css -----*/
+.emobvrfy_wrapper{width:510px; padding:18px; margin:0 auto; border:1px solid #f2f2f2; overflow:hidden;}
+.emobvrfy_wrapper p{clear:both; font-size:12px; line-height:15px;}
+.emobvrfy_wrapper form{margin:25px 0 0 0!important;}
+.emobvrfy_wrapper form label{width:163px; font-size:11px; text-align:right; margin:0 0 10px 0; float:left;}
+.emobvrfy_wrapper form .vrfyinput{width:165px; font-size:11px; margin:0 0 10px 7px; float:left; height:18px; border:1px solid #7f9db9;}
+.emobvrfy_wrapper form span{font-size:11px; margin:0 0 10px 7px; float:left; width:300px;}
+.emobvrfy_wrapper form .vrfybtn{margin:5px 0 0 190px; display:inline; float:left; clear: both;}
+.emobvrfy_wrapper form .compmsgtitle{width:250px; font-size:11px; text-align:left; margin:0 0 10px 0; float:left;}
+.emobvrfy_wrapper form .comptxtmsg{width:450px; font-size:11px; margin:0; float:left; border:1px solid #7f9db9;}
+.emobvrfy_wrapper form span a{color:#fff; background:#6e6e6e; padding:0 3px;}
+.emobvrfy_wrapper form .sendbtn{margin:10px 0 0 0; display:inline; float:left;}
+.emobvrfy_wrapper p.emailnote{float:left; font-size:10px; line-height:13px; color:#9a9a9a; margin:30px 0 0 0; text-align:justify;}
+.emobvrfy_wrapper .confrmdec_div{width:350px; padding:25px 0 0 150px; overflow:hidden;}
+.confrmdec_div .concan_btn{width:73px; margin:0 0 0 15px; display:inline; float:left;}
+
+/*----- photo acceptance popup css -----*/
+.pophotoacpt_wrapper{width:425px; padding:20px 0 25px 20px; margin:0 auto; border:1px solid #f2f2f2;}
+.pophotoacpt_wrapper p{font-size:12px;}
+.pophotoacpt_wrapper p a{color:#006599; font-weight:bold; text-decoration:underline;}
+.pophotoacpt_wrapper p a:hover{text-decoration:none;}
+
+/*----- add alternate no popup number -----*/
+.altformmrgn{margin:0!important;}
+.vrfytxt{width:100px; padding:3px 0 0 2px; font-size:10px; margin:0 0 0 10px;}
+.vrfytxt a{color:#006599; text-decoration:underline;}
+.vrfytxt a:hover{text-decoration:none;}
+
+/*----- gunmilap astro detail popup css -----*/
+.gunmilapopup_wrapper{width:465px; padding:13px 14px 25px 14px; margin:0 auto; border:1px solid #f2f2f2; overflow:hidden;}
+.gunmilapopup_wrapper .astrolft{width:271px;}
+.gunmilapopup_wrapper .astrorght{width:127px;}
+.astrolft span{color:#9a9a9a; font-size:10px; float:left;}
+.astrolft form{margin:15px 0 0 0; float:left;}
+.astrolft form label{width:92px; font-size:11px; text-align:right; padding:2px 0 0 0; float:left; margin:0 13px 6px 0;}
+.astroinput{width:164px; font-size:11px; padding:2px 0 0 0; float:left; margin:0 0 11px 0; height:18px; border:1px solid #7f9db9;}
+.ddastroslct{width:43px; height:20px; float:left; margin:0 0 11px 0; border:1px solid #7f9db9; float:left;}
+.mmastroslct{width:50px; height:20px; float:left; margin:0 3px 11px 3px; border:1px solid #7f9db9; float:left;}
+.yyastroslct{width:65px; height:20px; float:left; margin:0 0 11px 0; border:1px solid #7f9db9; float:left;}
+.mintastroslct{width:72px; height:20px; float:left; margin:0 0 11px 3px; border:1px solid #7f9db9; float:left;}
+.astroslct{width:165px; height:20px; float:left; margin:0 0 11px 0; border:1px solid #7f9db9;}
+.astrosbmtbtn{margin:4px 0 0 104px; float:left;}
+.astrorght span{color:#9a9a9a; font-size:10px; padding:0 0 3px 5px; float:left;}
+
+/*----- Update partner profile & hobbies, interest popup css -----*/
+.pphipopup_wrapper{width:465px; padding:30px 14px 12px 14px; margin:0 auto; border:1px solid #f2f2f2; overflow:hidden;}
+.pphipopup_wrapper form{margin:0 0 10px 0; padding:0; width:375px;}
+.pphipopup_wrapper form label{width:129px; padding:0 0 0 0; margin:0 13px 2px 0; text-align:right; float:left; font-size:11px;}
+.pphipopup_wrapper form textarea{width:230px; margin:0 0 11px 0; float:left; font-size:11px; height:67px; border:1px solid #7f9db9;}
+.pphipopup_wrapper form .pphiselct{width:165px; margin:0 0 11px 0; float:left; height:20px; border:1px solid #7f9db9;}
+.pphipopup_wrapper form .pphiselct2{width:53px; margin:0 0 11px 0; float:left; height:20px; border:1px solid #7f9db9;}
+.pphipopup_wrapper form .pphitotxt{margin:0 0 11px 0; float:left; font-size:11px; padding:4px 5px 0 5px;}
+.pphipopup_wrapper form p{color:#9a9a9a; font-size:11px; width:230px; float:left; line-height:13px; padding:4px 0 0 0;}
+.pphipopup_wrapper form p a{color:#fff; background:#333; padding:1px;}
+.pphipopup_wrapper form .pphisbmtbtn{margin:10px 0 0 142px; float:left;}
+.pphipopup_wrapper form .pphismultico{margin:0 0 0 5px; float:left; width:13px;}
+.pphipopup_wrapper span{margin:0; padding:0; width:450px; text-align:right; font-size:10px; color:#9a9a9a; float:left;}
+.pphipopup_wrapper form .pphioptnbx{width:200px; height:20px; margin:0 0 11px 0; padding:0; float:left;}
+.pphioptnbx .pphioptntxt{font-size:11px; padding:1px 7px 0 3px; float:left;}
+
+/*----- hobbies and Interest css -----*/
+.hoinpopup_wrapper{width:465px; padding:5px 14px 20px 14px; margin:0 auto; border:1px solid #f2f2f2; overflow:hidden;}
+.hoinpopup_wrapper form{margin:15px 0 0 0; padding:0; width:375px; float:left;}
+.hoinpopup_wrapper form label{width:129px; padding:0 0 0 0; margin:0 13px 11px 0; text-align:right; float:left; font-size:11px;}
+.hoinpopup_wrapper form textarea{width:230px; margin:0 0 11px 0; float:left; font-size:11px; height:67px; border:1px solid #7f9db9;}
+.hoinpopup_wrapper form .pphisbmtbtn{margin:10px 0 0 142px; float:left;}
+.hoinpopup_wrapper span{margin:0; padding:0; width:450px; text-align:right; font-size:10px; color:#9a9a9a; float:left;}
+
+/*----- matchtech info details popup css -----*/
+.pphipopup_wrapper form .mtyyselct{width:62px; margin:0 3px 11px 0; float:left; height:20px; border:1px solid #7f9db9;}
+.pphipopup_wrapper form .mtminselct{width:72px; margin:0 3px 11px 0; float:left; height:20px; border:1px solid #7f9db9;}
+.pphipopup_wrapper form .mtddselct{width:49px; margin:0 3px 11px 0; float:left; height:20px; border:1px solid #7f9db9;}
+
+/*----- Send acceptance of Interest Message -----*/
+.acptintpopup_wrapper{width:540px; padding:20px 30px 30px 30px; margin:0 auto; border:1px solid #f2f2f2; overflow:hidden;}
+.acptintpopup_wrapper p{font-size:11px; margin:0 0 20px 0; text-align:justify;}
+.acptintpopup_wrapper .acptmsgbox{width:538px; margin:5px 0;}
+.acptmsgbox .acptint_top{width:538px; height:10px; background:url(/images/acptint_popupbg.png) no-repeat 0 0; line-height:10px;}
+.acptmsgbox .acptint_mid{width:525px; background:url(/images/acptint_pop_midbg.png) repeat-y 0 0; padding:10px 0 5px 13px;}
+.acptint_mid .acptpopinfo{width:485px; padding:0 0 10px 25px; border-bottom:1px dotted #474747; margin:0 0 10px 0;}
+.acptpopinfo h5{font-size:12px; float:left; padding:11px 0 0 0;}
+.acptpopinfo img{margin:0 0 0 10px; float:left;}
+.acptpopinfo p{width:50px; text-align:right; margin:10px 6px 0 0!important; float:left; font-size:11px; font-weight:bold;}
+.acptpopinfo span{width:300px!important; float:left; font-size:11px!important; margin:10px 0 0 0; padding:0!important; color:#474747!important;}
+.acptint_mid .acptpopinfo2{width:485px; padding:0 0 10px 25px;}
+.acptpopinfo2 h5{font-size:12px; float:left; padding:11px 0 0 0; font-weight:normal;}
+.acptpopinfo2 form{width:470px; float:left; margin:15px 0 0 0;}
+.acptpopinfo2 form label{width:425px; float:left; margin:0 0 10px 3px; font-size:11px; text-align: left; padding: 2px 5px 5px 10px; }
+.acptpopinfo2 form .acptpopopt{width:14px; height:12px; float:left;}
+.acptpopinfo2 form .acptpopopt input {clear: both; width:14px; height:12px; float:left;}
+.acptpopinfo2 form .acinsbmtbtn{margin:5px 0 0 15px; float:left; display:inline;}
+.acptmsgbox .acptint_btm{width:538px; height:10px; background:url(/images/acptint_popupbg.png) no-repeat 0 -11px; line-height:10px;}
+.acptintpopup_wrapper span{font-size:10px; text-align:justify; color:#969696; padding:10px 0 0 5px; float:left; width:520px;}
+.acptintpopup_wrapper span a{font-size:10px; font-weight:bold; color:#006599; text-decoration:underline;}
+.acptintpopup_wrapper span a:hover{text-decoration:none;}
+
+/*----- address book popup css -----*/
+.addbook_wrapper{width:300px; padding:15px 5px 20px 10px; margin:0 auto; border:1px solid #f2f2f2; overflow:hidden;}
+.addbook_wrapper h4{clear:both; font-size:12px; line-height:15px; font-weight:normal; float:left;}
+.addbook_wrapper form{margin:10px 0 0 0!important; float:left;}
+.addbook_wrapper form .adprofdiv{width:140px; clear:left; margin:0 0 8px 0;}
+.adprofdiv label{width:90px; float:left; margin:1px 0 0 5px;}
+.adprofdiv label a{font-size:11px; color:#006599; text-decoration:none;}
+.adprofdiv label a:hover{font-size:11px; color:#006599; text-decoration:underline;}
+.adbkactnbtn{clear:left; margin:5px 0 0 3px; display:inline; float:left;}
+.addbook_wrapper .addsprofdiv{width:200px; position:absolute; z-index:4; margin:0 0 0 90px; #margin:0 0 0 -15px;}
+.addsprofdiv .adpmiddiv{width:183px; height:81px; background:url(/images/prof_hover_midbg.gif) repeat-x; padding:5px 0 0 0;}
+.adpmiddiv .adprofimg{border:1px solid #acacac; margin:0 6px 0 3px; display:inline;}
+.adpmiddiv p{width:120px; float:left; font-size:10px; margin:5px 0 18px 0;}
+.adpmiddiv a{width:105px; float:left; color:#006599; text-decoration:none; font-size:10px;}
+.adpmiddiv a:hover{color:#006599; text-decoration:underline;}
+
+/* MESSAGING POPUPS CSS, END HERE
+------------------------------------------- */
+
+
+/* REGISTRATION POPUPS CSS START HERE
+------------------------------------------- */
+/*----- help me write this start -----*/
+.hlpmewrte_wrap{width:785px; padding:15px 15px 20px 05px; margin:0 auto; border:1px solid #f2f2f2; overflow:hidden;}
+.hlpmewrte_wrap form{margin:0; padding:0;}
+.hlpmewrte_wrap form blockquote{padding:0 0 0 45px; background:url(/images/blockquote.gif) no-repeat;}
+.hlpmewrte_wrap form blockquote fieldset{color:#393939; padding:0; line-height:23px; font-size:14px; font-style:italic;}
+.hmwmidinput{border-bottom:1px dashed #ddd; width:220px; background:transparent; font-size:14px; font-style:italic; color:#909090; padding:0 2px; margin:7px 0 0 0;}
+.hmwmidinput:focus{background:#fefeed;}
+.hmwlrginput{border-bottom:1px dashed #ddd; width:375px; background:transparent; font-size:14px; font-style:italic; color:#909090; padding:0 2px; margin:6px 0 0 0;}
+.hmwlrginput:focus{background:#fefeed;}
+.hmwxlrginput{border-bottom:1px dashed #ddd; width:475px; background:transparent; font-size:14px; font-style:italic; color:#909090; padding:0 2px; margin:6px 0 0 0;}
+.hmwxlrginput:focus{background:#fefeed;}
+.hlpmewrte_wrap form blockquote fieldset img{margin:2px 0 -10px 5px;}
+.hmwsbmtbtn{margin:15px 0 0 45px; float:left;}
+
+.logreg_popwrap {    border: 1px solid #F2F2F2;     margin: 0 auto;     overflow: hidden;     padding: 3px 0 10px;     width: 680px; }
+.logreg_popwrap form {     float: left;     padding: 0 0 10px 30px;     width: 300px;} 
+.logreg_popwrap .lrregtxt {     border-top: 1px dashed #E1E1E1;     display: inline;     margin: 5px 0 0 20px; padding: 10px 0 10px 10px; width: 280px;}
+.logreg_popwrap form h4 { color: #1994BC; float: left; font-size: 14px;   width: 275px; }
+.logreg_popwrap form label { clear: left;float: left; font-size: 11px; height: 18px; margin: 10px 0 0;   width: 75px; }
+.logreg_popwrap form .lrinput { border: 1px solid #7F9DB9; font-size: 11px; height: 18px; margin: 10px 0 0; width: 165px; }
+.logreg_popwrap form font {  clear: left;  display: inline; float: left; font-size: 9px; margin: 0 0 0 100px; }
+.logreg_popwrap form font a { color: #006699;  text-decoration: underline;}
+.logreg_popwrap form font a:hover {
+    text-decoration: none;
+}
+.logreg_popwrap .lrregtxt {
+    border-top: 1px dashed #E1E1E1;
+    display: inline;
+    margin: 5px 0 0 20px;
+    padding: 10px 0 10px 10px;
+    width: 280px;
+}
+.lrregtxt p {
+    font-size: 11px;
+}
+.lrregtxt h4 {
+    clear: left;
+    color: #1994BC;
+    font-size: 16px;
+    padding: 3px 0 0;
+}
+.lrregtxt h4 a {
+    color: #1994BC;
+    text-decoration: none;
+}
+.lrregtxt h4 a:hover {
+    text-decoration: underline;
+}
+.lrregtxt h4 span {
+    color: #B02024;
+}
+.logregbtn {
+    display: inline;
+    margin: 15px 0 3px 100px;
+    clear :left;
+    float: left;
+}
+/*----- help me write this end -----*/
+
+/*----- reg photo popup1 start -----*/
+.reg_photowrap{width:817px; padding:20px 15px 25px 15px; margin:0 auto; border:1px solid #f2f2f2; overflow:hidden;}
+.reg_photowrap h6{font-size:14px;}
+.reg_photowrap p{font-size:12px; clear:left; float:left; margin:3px 0 25px 0; width:800px;}
+.reg_photowrap .regpalbm{width:265px; margin:0 11px 0 0;}
+.regpalbm h5{color:#8b8b8b; font-size:12px; font-style:italic; float:left;}
+.regpalbm ul{margin:3px 0 0 0; padding:0; float:left; width:268px;}
+.regpalbm ul li{width:51px; height:92px; float:left; margin:0 2px 0 0; padding:3px 0 0 0; list-style-type:none;}
+.regpalbm ul li img{float:left; border:1px solid #888;}
+.regpalbm ul li span{width:51px; font-size:9px; margin:3px 0 0 0; float:left; text-align:center;}
+.regpalbm ul li span a{color:#006599; text-decoration:underline;}
+.regpalbm ul li span a:hover{color:#006599; text-decoration:none;}
+.regpalbm ul li.rslctphoto{background:#d4f2c6;}
+.reg_photowrap h4{font-size:12px; float:left; clear:left; width:800px; margin:30px 0 10px 0;}
+
+.reg_photowrap .falbmnav{width:197px;}
+.falbmnav ul{margin:0; padding:0;}
+.falbmnav ul li{width:178px; padding:10px 0 10px 17px; background:#dadfeb; list-style-type:none; margin:0 0 3px 0; float:left; border-radius:5px 0 0 5px; -moz-border-radius:5px 0 0 5px; -webkit-border-radius:5px 0 0 5px; -khtml-border-radius:5px 0 0 5px; border:1px solid #dadfeb;}
+.falbmnav ul li h5{font-size:11px; float:left;}
+.falbmnav ul li h5 a{color:#474747; text-decoration:none;}
+.falbmnav ul li h5 a:hover{text-decoration:underline;}
+.falbmnav ul .afalbmnav{background:#3b5998!important; border:1px solid #3b5998!important; color:#fff!important;}
+
+.reg_photowrap .regfalbm{background:#3b5998; padding:0 30px 20px 29px; margin:30px 0 15px 0;}
+.regfalbm ul{margin:0; padding:0; float:left; width:758px;}
+.regfalbm ul.ulrfalbm{width:561px!important;}
+.regfalbm ul li{margin:20px 30px 0 0; width:167px; height:175px; float:left; list-style-type:none;}
+.regfalbm ul li .fimgdiv{width:151px; height:124px; background:#fff; float:left; padding:8px;}
+.fimgdiv .fchkphoto{width:12px; height:12px; border:1px solid #1c5180; float:left; margin:51px 8px 0 0;}
+.fimgdiv .fimgsctn{width:125px; float:left;}
+.regfalbm ul li .fimgslct{border:1px solid #7f9db9; margin:9px 0 0 20px; display:inline; width:123px; padding:1px 1px 1px 2px; float:left; clear:left; font-size:11px;}
+.fslctfbg{background:#d4f2c6!important;}
+.regfalbm .falbmpn{clear:both; margin:15px 0 0 0; float:left; white-space:nowrap; width:561px;}
+.falbmpn font{text-align:right; color:#fff; font-size:11px; float:right;}
+.falbmpn font a{text-decoration:none; color:#fff;}
+.falbmpn font a:hover{text-decoration:underline;}
+.reg_photowrap .rfbtmlnk{padding:0 40px 0 0; clear:left; float:left; width:97%;}
+.rfbtmlnk span{float:left; font-size:11px; color:#006599; white-space:nowrap;}
+.rfbtmlnk span a{text-decoration:underline; color:#006599;}
+.rfbtmlnk span a:hover{text-decoration:none;}
+
+/*----- reg photo popup1 end -----*/
+
+/*----- login and registration popup start -----*/
+.logreg_popwrap{width:680px; margin:0 auto; border:1px solid #f2f2f2; overflow:hidden; padding:3px 0 10px 0;}
+.logreg_popwrap .lrbdrght{border-right:1px solid #ccc; height:295px;}
+.logreg_popwrap form{width:300px; float:left; padding:0 0 10px 30px;}
+.logreg_popwrap form span{color:#9a9a9a; font-size:10px; float:right; width:250px; margin:0 0 20px 0; text-align:right;}
+.logreg_popwrap form h4{color:#1994bc; font-size:14px; width:275px; float:left;}
+.logreg_popwrap form label{width:75px; clear:left; float:left; font-size:11px; height:18px; margin:10px 0 0 0;}
+.logreg_popwrap form .lrinput{width:165px; height:18px; border:1px solid #7f9db9; font-size:11px; margin:10px 0 0 0;}
+.logreg_popwrap form textarea{width:165px; height:60px; border:1px solid #7f9db9; font-size:11px; margin:10px 0 0 0;}
+.logreg_popwrap form .lrslct{width:167px; height:18px; border:1px solid #7f9db9; font-size:11px; margin:10px 0 0 0;}
+.logregbtn{margin:15px 0 3px 75px; display:inline;}
+.logreg_popwrap form font{font-size:9px; margin:0 0 0 75px; display:inline; clear:left; float:left;}
+.logreg_popwrap form font a{color:#006699; text-decoration:underline;}
+.logreg_popwrap form font a:hover{text-decoration:none;}
+.logreg_popwrap .lrregtxt{width:280px; margin:5px 0 0 20px; padding:10px 0 10px 10px; display:inline; border-top:1px dashed #e1e1e1;}
+.lrregtxt p{font-size:11px;}
+.lrregtxt h4{font-size:16px; clear:left; color:#1994bc; padding:3px 0 0 0;}
+.lrregtxt h4 a{color:#1994bc; text-decoration:none;}
+.lrregtxt h4 a:hover{text-decoration:underline;}
+.lrregtxt h4 span{color:#B02024;}
+/*----- login and registration popup end -----*/
+
+
+
+
+
+
+/*----- Profile display album popup end -----*/
+
+/*----- Birthday Wish Popop Start------*/
+.bdaywish_wrap {
+    border: 1px solid #F2F2F2;
+    color: #4E4E4E;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 15px 10px;
+    position: relative;
+    width: 475px;
+}
+.bdaywish_wrap .bdayprofpic {
+    border: 1px solid #DDDDDD;
+    height: 94px;
+    margin: 0 10px 0 0;
+    padding: 1px;
+    width: 71px;
+}
+.bdaywish_wrap .bdayprofinfo {
+    width: 380px;
+}
+.bdayprofinfo a {
+    color: #006599;
+    text-decoration: none;
+}
+.bdayprofinfo a:hover {
+    text-decoration: underline;
+}
+.bdayprofinfo span {
+    float: left;
+    font-size: 12px;
+}
+.bdayprofinfo p {
+    clear: left;
+    float: left;
+    font-size: 11px;
+    line-height: 16px;
+}
+.bdayprofinfo font {
+    clear: left;
+    float: left;
+    font-size: 10px;
+    padding: 7px 0 0;
+}
+.bdaywish_wrap .bdaywishtxt {
+    margin: 15px 0 25px;
+    width: 470px;
+}
+.bdaywishtxt p {
+    color: #111111;
+    font-size: 12px;
+    line-height: 18px;
+}
+.bdaywishtxt p a {
+    color: #006599;
+    text-decoration: none;
+}
+.bdaywishtxt p a:hover {
+    text-decoration: underline;
+}
+.bdaywish_wrap .bdaysendcrd {
+    background: none repeat scroll 0 0 #EFEFEF;
+    color: #111111;
+    font-size: 12px;
+    padding: 7px 0 5px 5px;
+    width: 470px;
+}
+.bdaywish_wrap .bdaydteslct {
+    border: 1px solid #006599;
+    clear: left;
+    color: #474747;
+    float: left;
+    font-size: 11px;
+    margin: 15px 0;
+    width: 130px;
+}
+.bdaywish_wrap .bdayactnbtns {
+    float: left;
+    margin: 0 10px 0 0;
+}
+.bdaywish_wrap .bdaycakicopup {
+    background: url("/images/bday_cake_popupicon.png") no-repeat scroll 0 0 transparent;
+    bottom: 0;
+    height: 95px;
+    position: absolute;
+    right: 4px;
+    width: 90px;
+    z-index: 999;
+}
+/*--- Birthday wish popup end ---*/
+
+/*--- Forward Profile Popop start ---*/
+.frwdprof_wrap {
+    border: 1px solid #F2F2F2;
+    color: #4E4E4E;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 12px 10px;
+    width: 505px;
+}
+.frwdprof_wrap .mandrytxt {
+    font-size: 10px;
+    text-align: right;
+    width: 505px;
+}
+.mandrytxt a {
+    color: #BF2228;
+}
+.frwdprof_wrap form {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 505px;
+}
+.frwdprof_wrap form h6 {
+    float: left;
+    font-size: 12px;
+    margin: 10px 0 0;
+    width: 500px;
+}
+.frwdprof_wrap form .sndrcvrflds {
+    border: 1px dashed #DBDBDB;
+    margin: 15px 0 0;
+    padding: 10px 10px 15px;
+    width: 480px;
+}
+.sndrcvrflds label {
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0 20px 0 0;
+    width: 190px;
+}
+.sndrcvrflds label a {
+    color: #BF2228;
+}
+.sndrcvrflds .frwdprofinput {
+    border: 1px solid #7F9DB9;
+    float: left;
+    font-size: 11px;
+    height: 18px;
+    margin: 3px 20px 0 0;
+    width: 190px;
+}
+.sndrcvrflds span {
+    clear: left;
+    float: left;
+    font-size: 11px;
+    padding: 3px 0 0 210px;
+    width: 270px;
+}
+.sndrcvrflds .frwdprofmsg {
+    border: 1px solid #7F9DB9;
+    clear: left;
+    float: left;
+    font-size: 11px;
+    margin: 5px 0 0;
+    width: 480px;
+}
+.sndrcvrflds font {
+    float: left;
+    font-size: 10px;
+    margin: 3px 0 0;
+    width: 450px;
+}
+.frwdprof_wrap form .frwdprof_actnbtn {
+    float: right;
+    margin: 10px 5px 0 0;
+}
+/*-- Forward Profile Popup end --*/
+
+/*----- save search popup -----*/
+.savesrch_wrap{width:233px; margin:0 auto; color:#4e4e4e; padding:12px 10px; border:1px solid #f2f2f2; overflow:hidden;}
+.savesrch_wrap {float:left;}
+.savesrch_wrap label{font-size:11px; float:left; clear:left;}
+.savesrch_wrap  .savsrchinput{width:200px; height:18px; border:1px solid #7f9db9; float:left; margin:10px 0 0 0; clear:left; padding:2px;}
+.savesrch_wrap  .savsrchbtn{float:left; margin:13px 7px 0 0;}
+
+/** Social Profile CSS start **/
+
+.soclidnty_show {
+    background: url("/images/socialidnty_bg.png") repeat-x scroll 0 0 transparent;
+    border: 1px solid #F2F2F2;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px 15px;
+    width: 500px;
+}
+.subcontnt_txt {
+    width: 500px;
+}
+.subcontnt_txt p {
+    float: left;
+    font-size: 13px;
+    line-height: 24px;
+}
+.subcontnt_txt p a {
+	color:#006599;
+	text-decoration:none;
+}
+.subcontnt_txt p a:hover {
+	text-decoration:underline;
+}
+
+.subcontnt_txt h4 {
+    clear: left;
+    color: #474747;
+    float: left;
+    font-size: 16px;
+    margin: 0 0 15px;
+    width: 450px;
+}
+.socialidnty {
+    margin: 10px 0 0;
+    width: 500px;
+}
+.socialidnty .cnctwrap {
+}
+.lnkdncnct {
+    background: url("/images/cnct_fblnktwet.png") no-repeat scroll 0 0 transparent;
+    height: 30px;
+    line-height: 30px;
+    width: 118px;
+}
+.fbcnct {
+    background: url("/images/cnct_fblnktwet.png") no-repeat scroll 0 -31px transparent;
+    height: 30px;
+    line-height: 30px;
+    width: 118px;
+}
+.twtrcnct {
+    background: url("/images/cnct_fblnktwet.png") no-repeat scroll 0 -62px transparent;
+    height: 30px;
+    line-height: 30px;
+    width: 118px;
+}
+.cnctlnk {
+    background: url("/images/pluscnct_socialidnty.gif") no-repeat scroll 0 0 transparent;
+    font-size: 17px;
+    height: 20px;
+    margin: 4px 0 0 45px;
+    padding: 3px 0 0 30px;
+}
+.cnctlnk a {
+    color: #006599;
+    padding: 0 5px;
+    text-decoration: none;
+}
+.cnctlnk a:hover {
+    background: none repeat scroll 0 0 #E7F7FF;
+    text-decoration: none;
+}
+.socialidnty .vproflnk {
+    float: right;
+    width: 100%;
+}
+.socialidnty .vproflnk a {
+    color: #006599;
+    font-size: 13px;
+    margin: 5px 0 0;
+    padding: 3px 7px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.vproflnk a:hover {
+    background: none repeat scroll 0 0 #E7F7FF;
+    text-decoration: none;
+}
+
+/** Social Profile CSS end **/
+
+/*----- Video Messaging flow popup css starts -----*/
+.videostp1_wrap{width:550px; padding:15px; margin:0 auto; border:1px solid #f2f2f2; overflow:hidden;}
+.vdoactnbtn{margin:0 0 0 117px; display:inline;}
+.vdeooptn{padding:5px 30px 0; font-size:12px; float:left; color:#444;}
+.upldvdeobtn a{width:94px; height:27px; background:url("/images/upldorrcrd_actnbtn.png") 0 0; line-height:27px; display:block; text-decoration:none;}
+.upldvdeobtn a:hover{background:url("/images/upldorrcrd_actnbtn.png") 0 -28px;}
+.rcrdvdeobtn a{width:94px; height:27px; background:url("/images/upldorrcrd_actnbtn.png") 0 -56px; line-height:27px; display:block; text-decoration:none;}
+.rcrdvdeobtn a:hover{background:url("/images/upldorrcrd_actnbtn.png") 0 -84px;}
+.videostp1_wrap .upldvdeo{width:267px; margin:0 0 0 117px; display:inline;}
+.upldvdeo label{font-size:12px; float:left; clear:left; margin:10px 0 7px; width:220px;}
+.upldvedoinpt{width:265px; border:1px solid #006599; background:#fff; height:22px; font-size:12px;}
+.atchvdobtn{margin:11px 0 0 0;}
+.videostp1_wrap .rcrdvdeo{width:500px;}
+.rcrdvdeo label{font-size:12px; float:left; clear:left; margin:10px 0 7px; width:220px;}
+
+
+/*----- Video Messaging flow popup css end -----*/
+
+/*-- social connection how it works popup start --**/
+.simyact_wrap {
+    border: 1px solid #F2F2F2;
+    color: #474747;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 15px 10px 20px;
+    width: 655px;
+}
+.simyact_wrap h4 {
+    clear: left;
+    float: left;
+    font-size: 15px;
+}
+.simyact_wrap p {
+    clear: left;
+    float: left;
+    font-size: 11px;
+    line-height: 17px;
+    margin: 10px 0;
+    width: 655px;
+}
+.simyact_wrap h5 {
+    background: url("/images/whySI_myact.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    font-size: 13px;
+    height: 16px;
+    padding: 35px 0 0 30px;
+}
+.simyact_wrap ul {
+    clear: left;
+    display: inline;
+    float: left;
+    margin: 7px 0 0 30px !important;
+}
+.simyact_wrap ul li {
+    background: url("/images/simyactpopup_bullets.png") no-repeat scroll left center transparent;
+    float: left;
+    font-size: 12px;
+    list-style-type: none;
+    margin: 5px 0 0;
+    padding: 0 0 0 15px;
+    width: 400px;
+}
+/*-- social connection how it works popup end --**/
+
+
+/**Added by Himanshu on 17jan2011: Verify mobile info popup css start **/
+.mobvrfy_info {width:585px; height:345px; padding:10px 0 0 10px; margin:0 auto; font-family:Verdana, Arial, Helvetica, sans-serif; color:#474747; border:1px solid #f2f2f2;}
+.mobvrfy_info .vrfydiv {border-right:1px solid #e6e6e6; width:265px; padding:0 17px 0 0; height:285px; margin:0 20px 0 0;}
+.vrfydiv h4 {font-size:14px; float:left; padding:13px 0 7px 0;}
+.vrfydiv .arwtxt {width:265px; font-size:13px; background:url(../images/mobverfy_arow_ico.png) no-repeat 95% 100%; height:57px; padding:7px 0 0 0; line-height:18px;}
+.vrfydiv .phonetxt {width:265px; height:90px;}
+.phonetxt .condtn1 {margin:5px 0 0 0; color:#000;}
+.condtn1 .fldswrap {width:170px; margin:0 0 0 5px;}
+.condtn1 p {padding:6px 0 2px 0; width:130px; float:left; font-size:12px;}
+.condtn1 .nonedit {padding:6px 0 2px 0; width:145px; float:left; font-size:15px; color:#0082e8; background:#fff; font-weight:bold;}
+.condtn1 img{border:none;}
+.condtn1 .editno {padding:6px 0 2px 0; width:145px; margin:0 0 0 1px; display:inline;}
+.editno .locno {width:25px; height:19px; font-size:15px; color:006599; margin:0 5px 0 0; border:1px solid #006599;}
+.mobno {width:155px; height:19px; font-size:15px; color:006599; border:1px solid #006599;}
+.actnbtns {float:left;}
+.actnbtns img {float:left; border:none;}
+.mobvrfy_info .notevrfymob {font-size:11px; color:#666; line-height:17px; margin:5px 0 0 0; width:585px;}
+/** Verify mobile info popup css end **/
+
+
+/** tj connect permision popup css start **/
+.tjregper_info {width:650px; padding:10px 0 0 0; font-family:Arial, Helvetica, sans-serif; color:#474747; border:1px solid #ccc; height:345px;}
+.popprfimg{padding:0 0 6px 0; border-bottom:1px solid #ccc; margin:0 0 10px 10px; width:625px;}
+.tjregper_info .membicotxt {width:600px; height:30px; background:url(../images/memb_tj_cont_ico.png) no-repeat 5px 0; font-size:14px; color:#383838; padding:8px 0 0 50px;}
+.tjregper_info .content {width:625px; margin:7px 0 0 13px; height:155px; background:url(../images/sm_logo_tjconct_popup.png) no-repeat 100% 65%;}
+.content h3{font-size:14px; color:#343434; padding:0 0 6px 0; border-bottom:1px solid #ccc; width:625px;}
+.content ul {padding:0;}
+.content ul li {list-style-type:none; margin:7px 0 0 0; font-weight:bold;}
+.content ul li span {font-size:13px; color:#3f3f3f;}
+.content ul li p {font-size:11px; color:#7e7e7e; line-height:18px; padding:5px 0 0 0;}
+.tjregper_info .actionwrap {width:650px; height:35px; background:#fbfbfb; border-top:1px solid #ccc;}
+.actionwrap input {float:right; margin:5px 5px 0 0; border:none;}
+.actionwrap font {font-size:10px; color:#555; float:left; padding:18px 0 0 13px;}
+.actionwrap font a {color:#006599; text-decoration:none;}
+.actionwrap font a:hover {text-decoration:underline;}
+
+
+/** Send Message popup css start **/
+.mtchalrt-sndmsg-popup {width:515px; height:300px; padding:10px; margin:15px auto; color:#474747; border:1px solid #f2f2f2; overflow:hidden; font-family: 'Oxygen', sans-serif;}
+.mtchalrt-sndmsg-popup .usrinfo_wrap {width:97.8%; padding:2% 0 2% 2.3%; background:#f9f9f9;}
+.usrinfo_wrap .usr_pic_sml {width:40px; height:53px;}
+.usrinfo_wrap .usr_pic_sml img {width:40px; height:53px;}
+.usrinfo_wrap font.to_user {font-size:13px; margin:3px 10px 0 17px; font-weight:bold;}
+.usrinfo_wrap font.user_name {font-size:13px; color:#006599; margin:3px 0 0 10px; font-weight:bold; width:80%;}
+.usrinfo_wrap font.user_info {font-size:13px; margin:5px 0 0 17px; width:85%;}
+.mtchalrt-sndmsg-popup form {width:100%; float:left; margin:10px 0 0;}
+.mtchalrt-sndmsg-popup form label {float: left; font-size: 12px; font-weight: bold; text-align: right; margin:3px; padding:0 0 0 5px;}
+.mtchalrt-sndmsg-popup form .entersub {margin: 10px 0 5px; overflow: hidden; padding:0; width: 100%;}
+.mtchalrt-sndmsg-popup form .entersub input.compinput {border: 1px solid #7F9DB9; float: left; height: 19px; margin: 0 7px; width: 70%; font-family: 'Oxygen', sans-serif; padding:2px 3px;}
+.mtchalrt-sndmsg-popup form .entersub input.compinput:hover {box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;}
+.mtchalrt-sndmsg-popup form .txtboxwrap {width:98%; background:#f9f9f9;}
+.mtchalrt-sndmsg-popup form .txtwrap2 {width:100%;}
+.mtchalrt-sndmsg-popup form textarea.mtchalrt_txt {border: 1px solid #7F9DB9; margin: 5px 7px 0; width: 90%; font-family: 'Oxygen', sans-serif; padding:2px 3px; font-size:12px; height:65px; color:#474747;}
+.mtchalrt-sndmsg-popup form textarea.txt2 {width:95.9%!important;}
+.mtchalrt-sndmsg-popup form p.standardmsg {width:90%; font-size:12px; line-height:18px; margin:5px 7px 0; padding:2px 3px; height:65px; border: 1px solid #CCCCCC;}
+.mtchalrt-sndmsg-popup form textarea.mtchalrt_txt:hover {box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;}
+.mtchalrt-sndmsg-popup form .snd_mtchalrt_txt {margin:10px 0 10px 7px;}
+.mtchalrt-sndmsg-popup form .snd_mtchalrt_txt img {border:none;}
+.mtchalrt-sndmsg-popup form p.membship_gyan {width:98%; font-size:11px; line-height:15px; margin:15px 0 0 0; padding:1% 0 1% 2%; background:#fff6dd; border-radius:2px; border:1px dashed #fdcc4b;}
+.mtchalrt-sndmsg-popup form font.label_subs {padding:2px 10px; font-size:10px; color:#fff; background:#bf2328; margin:2px 0 0 10px; border-radius:3px; font-weight:bold; font-family:arial;}
+.mtchalrt-sndmsg-popup form div.widthcomp {width:100%; margin:7px 0 0;}
+.mtchalrt-sndmsg-popup form font.atachfile_malrt {height:20px; background:url(../images/atach_ico.png) no-repeat; padding:3px 0 0 27px; font-size:13px; color:#666; font-weight:bold;}
+.mtchalrt-sndmsg-popup form .uploadoc {width:125px; margin:0 0 0 10px;}
+.mtchalrt-sndmsg-popup form span.mustread {font-size:11px; color:#999; margin:5px 0 0 110px;}
+.mtchalrt-sndmsg-popup form font.atachvidz a {height:16px; background:url(../images/vdeoatach_ico.png) no-repeat 9% 0; padding:3px 0 3px 40px; font-size:13px; color:#006599; font-weight:bold; text-decoration:none; margin:0 0 0 10px; border-left:1px solid #999;}
+.mtchalrt-sndmsg-popup form a.rqtmreinfo {font-size:13px; padding:5px 15px; color:#006599; text-decoration:none; background:#e6f7ff; margin:10px 0 0 170px; border-radius:3px; font-weight:bold;}
+.mtchalrt-sndmsg-popup form a:hover.rqtmreinfo {background:#006599; color:#fff;}
+.mtchalrt-sndmsg-popup form .rmi_pstn {margin:10px 0 0 15px!important;}
+
+/** Send Message info popup css end **/
+.nyroModalLink iframe table{ width:100% !important}
+

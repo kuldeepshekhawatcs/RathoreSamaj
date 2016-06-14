@@ -1,0 +1,44 @@
+{
+"customerList":[
+	{
+	"name" : 1001, 
+	"name1" : "John Adams",
+	"name2" : 1001, 
+	"name3" : "John Adams",
+	"name4" : 1001, 
+	"name5" : "John Adams",
+	"name6" : 1001, 
+	"image" : ""
+	},
+	{
+	"name" : 1002, 
+	"name1" : "Steve",
+	"name2" : 1001, 
+	"name3" : "John Adams",
+	"name4" : 1001, 
+	"name5" : "John Adams",
+	"name6" : 1001, 
+	"image" : ""
+	},
+	{
+	"name" : 1003, 
+	"name1" : "John",
+	"name2" : 1001, 
+	"name3" : "John Adams",
+	"name4" : 1001, 
+	"name5" : "John Adams",
+	"name6" : 1001, 
+	"image" : ""
+	},
+	{
+	"name" : 1004, 
+	"name1" : "John Adams",
+	"name2" : 1001, 
+	"name3" : "John Adams",
+	"name4" : 1001, 
+	"name5" : "John Adams",
+	"name6" : 1001, 
+	"image" : ""
+	}				
+]
+}
