@@ -1,0 +1,165 @@
+<!-- <div class=" "> -->
+	<br class="clear"/>
+	<!-- <div class="panelStyle"> -->
+		<!-- <div class="row"> -->
+		<div class="search-form">
+
+ 
+<!-- <div class="search-form-left fl">
+	<h2><b>Search</b><br /> <span class="opensans-light">your match</span></h2>
+	
+	<div class="srch-slct">
+	<label><input name="genderSelect" value="FEMALE" type="radio" checked="checked" onChange="updateAge('FEMALE');"/> Bride</label>
+	<div class="clr"></div>
+	<label><input name="genderSelect" value="MALE" type="radio" onChange="updateAge('MALE');"/> Groom</label>
+	</div>
+	
+</div> -->
+
+
+<!-- <div class="smnhsrchsec">
+		<form id="searchCriteriaForm">
+		<div class="smnhsrchform">
+		<div style="padding-top: 5px;">
+	<input name="genderSelect" value="M" type="radio" ng-model="gender"/><label class="searchLebel" style="padding-right: 16px">Male</label></div>
+	  <div class="clr"></div>
+	  <div></div>
+	<div style="padding-top: 10px;"><input name="genderSelect" value="F" type="radio" ng-model="gender"/><label class="searchLebel">Female</label></div>
+ <div class="searchGender">
+ 	<div>
+	<input name="genderSelect" value="MALE" type="radio" onChange="updateAge('MALE');"/></div>
+    <div><input name="genderSelect" value="FEMALE" type="radio" checked="checked" onChange="updateAge('FEMALE');"/></div>
+</div>
+    
+    </div>
+		
+		<div class="smnhsrchform">
+	<label class="searchLebel">Age</label>
+    <div class="clr"></div>
+
+	<div class="styled-select" style="width:37px; float:left"><select class="form-control" ng-model="fromAge" style="width:45px;" ng-options="age.value as age.value for age in ageList">
+			<option value="" selected>--</option>
+		</select></div>
+	
+		 <span>to</span>
+
+   <div class="styled-select" style="width:37px; float:left">
+    <select class="form-control" ng-model="toAge" ng-options="age.value as age.value for age in ageList">
+    <option value="" selected>--</option>
+		</select></div>
+
+    
+    </div>
+
+<div class="smnhsrchform">
+	<label class="searchLebel">Annual Income</label>
+    <div class="styled-select">
+	<select id="religionSelect" name="religions" onChange="updateCaste();" class="qsselect">
+		<option selected="selected" value="DONM">Select</option>
+		</select>
+		<select class="form-control" ng-model="annualIncome" >
+								<option value="" >--Select---</option>
+								<option value="<50k" >below ₹ 50,000</option>
+								<option value="50k-2l" >₹ 50,000-2,00,000</option>
+								<option value="2l-5l" >₹ 2,00,000-5,00,000</option>
+								<option value="5l-8l" >₹ 5,00,000-8,00,000</option>
+								<option value="8l-12l" >₹ 8,00,000-12,00,000</option>
+								<option value=">12l" >above ₹12,00,000</option>
+							</select>
+    </div>
+    </div>
+
+<div class="smnhsrchform">
+	<label class="searchLebel">City</label>
+     <div class="styled-select-city">
+	<select class="form-control" ng-model="location" >
+								<option value="" >--Select---</option>
+								<option value="Bhopal" >Bhopal</option>
+								<option value="Chittorgarh" >Chittorgarh</option>
+								<option value="Dewas" >Dewas</option>
+								<option value="Gwalior" >Gwalior</option>
+								<option value="Indore" >Indore</option>
+								<option value="Jabalpur" >Jabalpur</option>
+								<option value="Katni" >Katni</option>
+								<option value="Neemach" >Neemach</option>
+								<option value="Ratlam" >Ratlam</option>
+								<option value="Ujjain" >Ujjain</option>
+							</select>
+    </div>
+    </div>
+
+
+
+<div class="smnhsrchform">
+
+ <div class="fright"> 
+		<button class="callToAction" ng-click="search()">Search</button>
+	</div> </div>
+</form>
+
+</div> -->
+</div>
+		
+				<table id="tableParams" class="hometable" cellspacing="0">
+					<tr ng-repeat="candidate in candidateList">
+						<td>
+						<div class="panelStyle">
+						<div class="row">
+						<div class="col-md-12"><div class="col-md-2"><div class="thumbnail"><!-- <img ngf-src="customer.image" class="thumb"> -->
+							<img ng-src="/RathoreSamaj/register/getimage?candidateId={{candidate.id}}"/>
+						</div></div>
+						<div class="col-md-10">
+							<label class="col-md-2 control-label">Name:</label> 
+							<div class="col-md-3">
+									{{candidate.firstName}} {{candidate.lastName}}
+							</div>
+							<label class="col-md-2 control-label">Age:</label> 
+							<div class="col-md-3">
+									{{candidate.age}}
+							</div>
+						</div>
+						<div class="col-md-10">
+							<label class="col-md-2 control-label">Gender:</label> 
+							<div class="col-md-3">
+									{{candidate.gender}}
+							</div>
+							<label class="col-md-2 control-label">Education:</label> 
+							<div class="col-md-3">
+									{{candidate.education}}
+							</div>
+						</div>
+						<div class="col-md-10">
+							<label class="col-md-2 control-label">Religion:</label> 
+							<div class="col-md-3">
+									{{candidate.religion}}
+							</div>
+							<label class="col-md-2 control-label">Occupation:</label> 
+							<div class="col-md-3">
+									{{candidate.occupation}}
+							</div>
+						</div>
+						<div class="col-md-10">
+							<label class="col-md-2 control-label">City:</label> 
+							<div class="col-md-3">
+									{{candidate.location}}
+							<!-- </div>
+							<label class="col-md-2 control-label">Mobile No:</label> 
+							<div class="col-md-3">
+									{{candidate.candidateMobileNumber}}
+							</div> -->
+							</div>
+							<label class="col-md-2 control-label">Annual Income</label> 
+							<div class="col-md-3">
+									{{candidate.annualIncome}}
+							</div>
+						</div>
+						</div>
+						</div>
+						</div>
+						</td>
+						
+					</tr>
+				</table>
+				<!-- </div> -->
+				<!-- </div> -->
+			<!-- </div> -->
