@@ -1,0 +1,67 @@
+
+<div class="col-md-6">
+
+<div class="w3-content w3-section" style="max-width:500px;float:left;">
+  <img class="mySlides" src="images/image1.png" style="width:100%">
+  <img class="mySlides" src="images/image1.png" style="width:100%">
+  <img class="mySlides" src="images/image1.png" style="width:100%">
+</div>
+
+</div>
+<div class="col-md-6">
+<div class="panel panel-default">
+   <div class="panel-heading" style="background-color: #FAAE47;">Latest News</div>   		
+
+		  <li class="list-group-item">First item</li>
+		  <li class="list-group-item">Second item</li>
+		  <li class="list-group-item">Third item</li>
+		  <li class="list-group-item">Fourth item</li>
+		  <li class="list-group-item">Fifth item</li>
+		  <li class="list-group-item">Sixth item</li>
+
+  </div>
+</div>
+
+<div class="col-md-12" style="margin-top: 1%;">
+  <div class="panel panel-default">
+   <div class="panel-heading" style="text-align:left;background-color: #FAAE47;">Latest News</div>   		
+  </div>
+<div class="panelStyle">
+<p>
+This About Us page for Madebyband takes a bit of a different approach, but still manages to instantly communicate the brand's personality via some hand crafted type and a dispersal of simple accompanying images. The use of handwritten type adds a unique personal touch to the page design, and the clean, simple imagery and presence of white space helps to balance everything out.
+</p>
+<p>
+So, whether it's through custom type or a few personal images, try to find a way to interject your brand's personality into your About Us page.
+</p>
+</div>
+
+</div>
+
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
+
+
+
+ 
+
+
+
