@@ -19,13 +19,9 @@ $routeProvider.when('/home', {
         templateUrl: 'html/mission.html',
         controller: 'missionCtrl'
     });
-    $routeProvider.when('/login', {
-        templateUrl: 'html/login.html',
-        
-    });
     $routeProvider.when('/dashboard', {
-        templateUrl: '/dashboard.html',
-        
+        templateUrl: 'html/dashboard.html',
+        controller: 'adminDashBoardCtrl'
     });
     $routeProvider.otherwise({
 		redirectTo : '/home'

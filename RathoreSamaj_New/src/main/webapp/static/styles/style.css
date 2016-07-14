@@ -20,6 +20,22 @@ h4 { font-size: 18px; }
 h5 { font-size: 16px; }
 h6, p { font-size: 14px; }
 
+footer {background-color: #e3eff5; 
+    background: linear-gradient(#d2dfe8, #d2dfe8); margin: 20px 0px 0px 0px; width: 100% }
+footer, .main:after { 
+	min-height: 36px; 
+}
+.footer { padding: 9px 0px 9px 0px; width: 100%; float: left; line-height: 18px; color: #fff; }
+.footer a { color: #f7f7f7; padding: 0px 4px; }
+.footer a:hover { color: #ccc; }
+.footer a span { color: #ccc; }
+.main-content {
+	margin-top: 20px;
+}
+
+.col-md-6{
+	padding-left: 0px	
+}
 
 #home-menu-container{margin-bottom: -15px;}
 
@@ -188,4 +204,15 @@ li a:hover:not(.active) {
     color: white;
 }
 
-
+.loginbox-container{background-color: #e3eff5; 
+    background: linear-gradient(#d2dfe8, #d2dfe8); max-width: 670px;}
+.loginbox { width:100%; padding: 25px; background: #ffffff; }
+.ngdialog-lg .ngdialog-content {
+  width:900px !important;
+}
+.ngdialog.ngdialog-theme-default .ngdialog-content {
+	width:703px !important;
+}
+.loginLeftBlock{     margin-top: 20px;
+    text-align: center;
+    padding-bottom: 25px;}
