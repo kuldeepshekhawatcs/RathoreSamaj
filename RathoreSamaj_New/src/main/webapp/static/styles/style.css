@@ -66,6 +66,14 @@ button.callToAction:hover { background-color: #42a591; border-bottom-color: #388
     top: 7px;
 }
 
+.loginImage{
+	width: 200px;
+    height: 200px;
+    float: none;
+    position: relative;
+    top: 7px;
+}
+
 .viewthumb {
     width: 700px;
     height: 350px;
