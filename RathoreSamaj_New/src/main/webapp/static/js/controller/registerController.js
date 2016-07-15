@@ -1,5 +1,6 @@
 myController.controller('registerCtrl',['$scope','Upload','registerFactory','fileUploadService','$location',function($scope,Upload,registerFactory,fileUploadService,$location){
 	
+			$rootScope.advertisementBlock = true;
 			$scope.input = new registerFactory();
 			$scope.dateList = [];
 			$scope.monthList = [];

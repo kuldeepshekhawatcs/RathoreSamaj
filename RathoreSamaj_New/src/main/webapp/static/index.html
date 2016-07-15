@@ -3,12 +3,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>MyProject</title>
-<link rel="stylesheet prefetch" href="./styles/ngDialog-theme-default.css">
-<link rel="stylesheet prefetch" href="./styles/ngDialog-theme-plain.css">
-<link rel="stylesheet prefetch" href="./styles/ngDialog.css">
-<link rel="stylesheet prefetch" href="./styles/ng-table.css">
-<link rel="stylesheet prefetch" href="./styles/font.css">
-<link rel="stylesheet prefetch" href="./styles/font-awesome.min.css">
+<link rel="stylesheet prefetch" href="styles/ngDialog-theme-default.css">
+<link rel="stylesheet prefetch" href="styles/ngDialog-theme-plain.css">
+<link rel="stylesheet prefetch" href="styles/ngDialog.css">
+<link rel="stylesheet prefetch" href="styles/ng-table.css">
+<link rel="stylesheet prefetch" href="styles/font.css">
+<link rel="stylesheet prefetch" href="styles/font-awesome.min.css">
 <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="styles/searchStyle.css" rel="stylesheet">
 <link href="styles/new-sm-style.css" rel="stylesheet">
@@ -159,12 +159,14 @@
 			</div>
 			<br class="clear">
 			<div class="row">
-				<div class="col-md-10">
+				<div class="col-md-10" ng-if="advertisementBlock">
 					<div ng-view></div>
 				</div>
-
+				<div class="col-md-12" ng-if="!advertisementBlock">
+					<div ng-view></div>
+				</div>
 				<div class="col-md-2"
-					style="border: 1px solid; border-color: black; height: 595px" ng-if="advertisementBlock">
+					style="border: 1px solid; border-color: black; height: 595px; width:190px" ng-if="advertisementBlock">
 					<div class="advertisement">
 						Advertisement block
 						<marquee behavior="scroll" direction="down" class="advertisement">

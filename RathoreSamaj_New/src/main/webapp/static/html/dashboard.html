@@ -1,40 +1,40 @@
-<ul>
-  <li><a class="active" href="#home">Admin</a></li>
-</ul>
+<div class="col-md-12 header-container">
+	<div class="col-md-2">
+		<ul>
+			<li><a class="active" href="#home">Admin</a></li>
+		</ul>
+	</div>
+	<div class="col-md-10">
+		<div class="panelStyle">
+			<div class="row">
+				<div class="cmngrid-list top-grid ng-table-heading">
+					<table ng-table="usersTable" class="table table-striped" show-filter="false" cellspacing="0">
+						<tr  ng-repeat="user in $data">
+							<td data-title="'Id'" sortable="'id'">{{user.id}}</td>
+							<td data-title="'First Name'" sortable="'firstName'">{{user.firstName}}</td>
+							<td data-title="'Last Name'" sortable="'lastName'">{{user.lastName}}</td>
+							<td data-title="'Age'" sortable="'age'">{{user.age}}</td>
+							<td data-title="'Gender'" sortable="'gender'">{{user.gender}}</td>
+							<td data-title="'Education'" sortable="'education'">{{user.education}}</td>
+							<td data-title="'Religion'" sortable="'religion'">{{user.religion}}</td>
+							<td data-title="'Occupation'" sortable="'occupation'">{{user.occupation}}</td>
+							<td data-title="'Location'" sortable="'location'">{{user.location}}</td>
+							<td data-title="'AnnualIncome'" sortable="'annualIncome'">{{user.annualIncome}}</td>
+							<td data-title="'Edit'">
+								<button type="button" class="glyphicon glyphicon-pencil"
+									data="{{user.id}}" ng-click="updateData(user)"></button></td>
+							<td data-title="'Delete'">
+								<button type="button" class=" glyphicon glyphicon-remove-circle"
+									data="{{user.id}}" ng-click="deleteData(user.id)"></button>
 
-<div>
-
-<table ng-table="usersTable" class="table table-striped">
-   <tr ng-repeat="user in data">
-       <td data-title="'Id'" >
-           {{user.id}}
-       </td>
-       <td data-title="'First Name'" >
-           {{user.first_name}}
-       </td>
-       <td data-title="'Last Name'" >
-           {{user.last_name}}
-       </td>    
-       <td data-title="'e-mail'" >
-           {{user.email}}
-       </td>    
-       <td data-title="'Country'">
-           {{user.country}}
-       </td>    
-       <td data-title="'IP'" >
-           {{user.ip_address}}
-       </td> 
-        <td data-title="'Action'" >
-           <button type="button" class="glyphicon glyphicon-pencil" data="{{user.id}}" ng-click="updateData(user.id)"></button>
-     <button type="button" class=" glyphicon glyphicon-remove-circle" data="{{user.id}}" ng-click="deleteData(user.id)"></button>
-    
-       </td>    
-   </tr>
-</table>
-
-
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
 
 
 <!-- <style>
