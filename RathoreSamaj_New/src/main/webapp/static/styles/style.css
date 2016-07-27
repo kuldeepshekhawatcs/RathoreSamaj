@@ -21,9 +21,9 @@ h5 { font-size: 16px; }
 h6, p { font-size: 14px; }
 
 footer {background-color: #e3eff5; 
-    background: linear-gradient(#d2dfe8, #d2dfe8); margin: 20px 0px 0px 0px; width: 100% }
+    background: linear-gradient(#d2dfe8, #d2dfe8); margin: 20px 0px 0px 0px; width: 100% ;    margin-top: auto;}
 footer, .main:after { 
-	min-height: 36px; 
+	min-height: 20px; 
 }
 .footer { padding: 9px 0px 9px 0px; width: 100%; float: left; line-height: 18px; color: #fff; }
 .footer a { color: #f7f7f7; padding: 0px 4px; }
@@ -98,11 +98,11 @@ button.callToAction:hover { background-color: #42a591; border-bottom-color: #388
 }
 
 .advertisement{
-	width:100%; height:475px;
+	width:104%; height:560px;
 }
 
 .advertisementimagesize{
-	width:150px;
+	width:200px;
 	height:100px;
 }
 
@@ -165,11 +165,12 @@ button.callToAction:hover { background-color: #42a591; border-bottom-color: #388
 }
 
 .footer{
-    background: #ffffff;
+    
+    background: url(../images/bgnoise_lg.png);
     border: 1px solid #ddd;
     padding: 20px;
     box-shadow: 0 0px 5px #ccc;
-    width: 123%;
+    width: 110%;
 }
 .mySlides {display:none;}
 

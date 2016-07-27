@@ -27,7 +27,6 @@
 				<!-- <div ng-include="'./html/test.html'"></div>  -->
 				<div class="header-container">
 
-
 					<table width="100%" cellpadding="0" cellspacing="0" border="0">
 						<tr>
 							<td align="center">
@@ -47,98 +46,8 @@
 													<td align="left" valign="top" width="202"><img
 														src="images/logo.png" alt="" border="0" /></td>
 
-													<td width="800" valign="top" align="left">
-														<table cellpadding="0" cellspacing="0" width="100%">
-															<tr>
-																<td>
 
-																	<table cellpadding="0" cellspacing="0" width="100%"
-																		border="0">
-																		<tr>
-																			<td width="345" align="left" valign="top"></td>
-																			<td width="10"><img src="images/sapcer.gif"
-																				width="10" height="1" /></td>
-																			<td width="441" align="left" valign="top">
-																				<table cellpadding="0" cellspacing="0" width="100%">
-																					<tr>
-																						<td align="right" style="width: 442px">
-																							<table width="50%" border="0" cellspacing="0"
-																								cellpadding="0">
-																								<tr align="right">
-																									<td align="right"><span class="link">
-
-																											<a ng-click="openLoginDialog()" title="login">Login</a>
-
-																									</span></td>
-																									<td align="right"><span class="link">
-
-																											<a href="contactus.aspx"
-																											onclick="plz_wait();" title="ContactUs">ContactUs</a>
-
-																									</span></td>
-																									<td align="right"><span class="link"><a
-																											href="sitemap.aspx" onclick="plz_wait();"
-																											title="Sitemap">Sitemap</a></span></td>
-																								</tr>
-																							</table>
-																						</td>
-																					</tr>
-																					<tr>
-																						<td align="right" valign="top"
-																							style="width: 442px; height: 82px"></td>
-																					</tr>
-																				</table>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-															</tr>
-															<tr>
-																<td>
-																	<table cellpadding="0" cellspacing="0" width="100%">
-																		<tr>
-																			<td width="79"></td>
-																			<td>
-																				<table cellpadding="0" cellspacing="0" width="100%">
-																					<tr>
-
-																						<td style="height: 28px"><a href="#/register">
-																								<img src="images/register.jpg" alt="Matrimonial"
-																								name="Image8" border="0" id="Image8" />
-																						</a></td>
-																						<td style="height: 28px"><a
-																							href="#/home.html"> <img
-																								src="images/matrimonial.jpg" alt="Matrimonial"
-																								name="Image8" border="0" id="Image8" />
-																						</a></td>
-
-																						<td style="height: 28px"><a
-																							href="news.aspx?lang="> <img
-																								src="images/news.jpg" alt="News" name="Img16"
-																								border="0" id="Img16" alt="" />
-																						</a></td>
-
-																						<td style="height: 28px"><a
-																							href="eventss.aspx?lang="> <img
-																								src="images/events.jpg" alt="Events"
-																								name="Img17" border="0" id="Img17" alt="" />
-																						</a></td>
-
-
-																						<td style="height: 28px"><a href="#/aboutus"
-																							title="About Us"> <img
-																								src="images/about_us.jpg" alt="About us"
-																								name="Image10" border="0" id="Image10" alt="" />
-																						</a></td>
-																					</tr>
-																				</table>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-															</tr>
-														</table>
-													</td>
+	
 												</tr>
 											</table>
 
@@ -157,35 +66,44 @@
 					</table>
 				</div>
 			</div>
-			<br class="clear">
-			<div class="row">
-				<div class="col-md-10" ng-if="advertisementBlock">
+	  <nav class="navbar navbar-default" style="margin-top: 18px; background-color: #e3eff5;">
+        <div class="container-fluid">
+          <div id="navbar" class="navbar-collapse collapse" style="float: right; ">
+            <ul class="nav navbar-nav" style="background-color: #e3eff5;">
+              <li class="active" ><a href="#/aboutus" style="color:#FAAE47">Home</a></li>
+              <li><a href="#/register" style="color:#FAAE47">Register</a></li>
+              <li><a href="#/home.html" style="color:#FAAE47">Matrimony</a></li> 
+            </ul>
+             </div>
+        </div>
+      </nav>  
+      <div class="row">
+				 <div class="col-md-10" ng-if="advertisementBlock">
 					<div ng-view></div>
-				</div>
-				<div class="col-md-12" ng-if="!advertisementBlock">
+				</div> 
+				 <div class="col-md-12" ng-if="!advertisementBlock">
 					<div ng-view></div>
-				</div>
-				<div class="col-md-2"
-					style="border: 1px solid; border-color: black; height: 595px; width:190px" ng-if="advertisementBlock">
-					<div class="advertisement">
-						Advertisement block
-						<marquee behavior="scroll" direction="down" class="advertisement">
-							<img src="images/logo.jpg" class="advertisementimagesize"
-								alt="Flying Bat"> <img src="images/logo.jpg"
-								class="advertisementimagesize" alt="Flying Bat"> <img
-								src="images/logo.jpg" class="advertisementimagesize"
+				</div> 
+				<div class="col-md-2" style="border: 1px solid; border-color: black; height: 595px; width:190px; padding-left: 0%;" ng-if="advertisementBlock">
+					 <div class="advertisement">
+						Advertisement block <!-- behavior="scroll" --> 
+						<marquee behavior="alternate" direction="down" class="advertisement">
+							<img src="images/adv_1.jpg" class="advertisementimagesize"
+								alt="Flying Bat"> <img src="images/adv_2.jpg"
+								class="advertisementimagesize" alt="Flying Bat">
+								 <img src="images/adv_3.jpg" class="advertisementimagesize"
 								alt="Flying Bat">
 						</marquee>
 
 
-					</div>
-				</div>
+					 </div> 
+				 </div> 
 			</div>
 		</div>
 	</div>
 
-
-	<div>
+		<!-- style="border: 1px solid; border-color: black; height: 581px;width: 220px;margin-left: 81%;margin-top: -51%;" ng-if="advertisementBlock"> -->
+	<div style="margin-left: -9%;">
 		<div data-ng-include='"./html/footer.html"'></div>
 	</div>
 	<!--  bootstrap js included start-->
