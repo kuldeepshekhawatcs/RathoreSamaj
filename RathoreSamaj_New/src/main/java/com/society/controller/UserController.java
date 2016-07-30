@@ -16,7 +16,7 @@ public class UserController {
 	@Autowired  
 	UserService userService;
 	
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String validateUser(@RequestParam("username") String username,@RequestParam("password") String password)
 	{
 		return userService.validateUser(username,password);

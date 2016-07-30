@@ -1,15 +1,12 @@
 myApp.factory('registerFactory', function($resource){
-	return $resource('/serverURL', {}, {
-		'get' : {
-			method : 'GET',
-			url : 'json/employee.json'
-		},
-		'save' : {
-			method : 'POST',
-			headers: [{'Content-Type': 'application/json'}]
-		},
+	var baseURL = '/RathoreSamaj/register';
+	return $resource(baseURL, {}, {
 		'delete' : {
 			method : 'DELETE'
+		},
+		'getcandiatedetailbyid':{
+			method : 'GET',
+			url : baseURL+'/getcandiatedetailbyid'
 		}
 	});
 });

@@ -1,4 +1,4 @@
-myController.controller('mainCtrl',['$scope','$rootScope','ngDialog',function($scope,$rootScope,ngDialog){
+myController.controller('mainCtrl',['$scope','$rootScope','ngDialog','$location',function($scope,$rootScope,ngDialog,$location){
 	
 	$rootScope.advertisementBlock = true;
 	
@@ -12,5 +12,8 @@ myController.controller('mainCtrl',['$scope','$rootScope','ngDialog',function($s
 		});
 	};
 			
-			
+	$scope.logout = function(){
+		$rootScope.showLogin = true;
+		$location.path('/home').search('');
+	};		
 }]);

@@ -30,7 +30,7 @@ myController.controller('adminDashBoardCtrl',['$scope','$rootScope','NgTablePara
 		});
    };
     	$scope.updateData = function(data){
-    	  $location.path('/register').search({user: data});
+    	  $location.path('/register').search({candidateid: data.id});
     	   
     	}
     	

@@ -1,4 +1,4 @@
-myController.controller('homeCtrl',['$scope','homeFactory',function($scope,homeFactory){
+myController.controller('homeCtrl',['$scope','$rootScope','homeFactory',function($scope,$rootScope,homeFactory){
 	$rootScope.advertisementBlock = true;
 	homeFactory.get(function(result){
 		$scope.candidateList = result.candidateDTOList;

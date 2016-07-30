@@ -1,4 +1,4 @@
-myController.controller('registerCtrl',['$scope','Upload','registerFactory','fileUploadService','$location',function($scope,Upload,registerFactory,fileUploadService,$location){
+myController.controller('registerCtrl',['$scope','Upload','registerFactory','fileUploadService','$location','$rootScope',function($scope,Upload,registerFactory,fileUploadService,$location,$rootScope){
 	
 			$rootScope.advertisementBlock = true;
 			$scope.input = new registerFactory();
@@ -29,5 +29,19 @@ myController.controller('registerCtrl',['$scope','Upload','registerFactory','fil
 					}
 				    	}).error(function(result){
 				    	});
+			};
+			
+			var searchObject = $location.search();
+			if(searchObject!=undefined && searchObject!='' && searchObject.candidateid!=''){
+				registerFactory.getcandiatedetailbyid({candidateId:searchObject.candidateid}, function(result){
+						$scope.input = result;
+						var dob = result.dob;
+						if(dob!=''){
+							dob  = dob.split('/');
+							$scope.date = parseInt(dob[0]);
+							$scope.month = parseInt(dob[1]);
+							$scope.year = parseInt(dob[2]);
+						}
+				});
 			}
 }]);
