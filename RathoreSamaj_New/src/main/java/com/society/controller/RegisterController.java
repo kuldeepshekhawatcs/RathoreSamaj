@@ -7,6 +7,8 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.apache.commons.beanutils.BeanPropertyValueEqualsPredicate;
+import org.apache.commons.beanutils.BeanToPropertyValueTransformer;
+import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -130,8 +132,8 @@ public class RegisterController {
 	@RequestMapping(value = "/getcandiatedetailbyid", method = RequestMethod.GET)
 	public CandidateDTO getCandiateDetailById(@RequestParam("candidateId") int candidateId) throws Exception {
 		Candidate candidate = registerService.findById(candidateId);
-		CandidateHelper candidateHelper = new CandidateHelper();
-		CandidateDTO candidateDTO = candidateHelper.convertCandidateToCandidateDTO(candidate);
-		return candidateDTO;
+		CandidateDTO candidateData = new CandidateDTO();
+		BeanUtils.copyProperties(candidateData, candidate);
+		return candidateData;
 }
 }

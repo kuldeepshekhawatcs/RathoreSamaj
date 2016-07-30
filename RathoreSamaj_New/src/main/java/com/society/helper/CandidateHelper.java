@@ -56,9 +56,12 @@ public class CandidateHelper {
 		if(candidate.getAnnualIncome()!=null){
 			candidateDTO.setAnnualIncome(candidate.getAnnualIncome());
 		}
+		if(candidate.getImage() != null)
+		{
 		int blobLength = (int) candidate.getImage().length();  
 		byte[] blobAsBytes = candidate.getImage().getBytes(1, blobLength);
 		candidateDTO.setImage(blobAsBytes);
+		}
 		return candidateDTO;
 	}
 	
