@@ -9,4 +9,5 @@ public interface RegisterDao {
 	   public List<Candidate> getAllRegisterCandidate();
 	    public void deleteRegisterCandidate(Integer employeeId);
 		public void addRegisterCandidateDao(Candidate candidate);
+		public Candidate findById(Integer employeeId);
 }

@@ -11,6 +11,7 @@ import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,17 +26,19 @@ import com.society.domain.Candidate;
 import com.society.dto.CandidateDTO;
 import com.society.dto.CandidateDTOList;
 import com.society.dto.CustomerDTO;
+import com.society.helper.CandidateHelper;
 import com.society.service.RegisterService;
+import com.society.service.UserService;
 
 @RestController
 @RequestMapping(value = "/register")
 public class RegisterController {
 
 
-	
-
 	@Autowired  
 	RegisterService registerService;
+	
+
 	
 	@RequestMapping(value = "/addcandidate", method = RequestMethod.POST)
 	public String addCandidate(MultipartHttpServletRequest request,	@RequestHeader HttpHeaders requestHeader) throws Exception {
@@ -51,8 +54,6 @@ public class RegisterController {
 	      Blob blob = new javax.sql.rowset.serial.SerialBlob(bytes);
 	      candidate.setImage(blob);
 	    }
-	   // candidates.add(customerDTO);
-	    //candidates.add(candidate);
 	    registerService.addRegisterCandidate(candidate);
 		return "success";
 	}
@@ -65,6 +66,7 @@ public class RegisterController {
 		Collections.reverse(candidates);
 		candidateDTOList.setCandidateDTOList(candidates);
 			return candidateDTOList;
+		
 	}
 	
 	@RequestMapping(value = "/getimage", method = RequestMethod.GET)
@@ -118,4 +120,18 @@ public class RegisterController {
 	}
 	
 	
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
+	public String removeCandidate(@RequestParam("candidateId") int candidateId) throws Exception {
+	  registerService.deleteRegisterCandidate(candidateId);
+	  return "success";
+	}
+	
+	
+	@RequestMapping(value = "/getcandiatedetailbyid", method = RequestMethod.GET)
+	public CandidateDTO getCandiateDetailById(@RequestParam("candidateId") int candidateId) throws Exception {
+		Candidate candidate = registerService.findById(candidateId);
+		CandidateHelper candidateHelper = new CandidateHelper();
+		CandidateDTO candidateDTO = candidateHelper.convertCandidateToCandidateDTO(candidate);
+		return candidateDTO;
+}
 }

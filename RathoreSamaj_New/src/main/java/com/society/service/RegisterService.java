@@ -12,4 +12,5 @@ public interface RegisterService {
 	public void addRegisterCandidate(Candidate candidate);
     public List<CandidateDTO> getAllRegisterCandidate() throws SQLException;
     public void deleteRegisterCandidate(Integer candidate);
+    public Candidate findById(Integer employeeId);
 }

@@ -14,16 +14,16 @@ import com.society.dto.CandidateDTO;
 import com.society.helper.CandidateHelper;
 
 @Service
+@Transactional
 public class RegisterServiceImpl implements RegisterService{
 	@Autowired
     private RegisterDao registerDao;
-	@Transactional
+	
 	public void addRegisterCandidate(Candidate candidate) {
 		registerDao.addRegisterCandidateDao(candidate);
 	}
 
 	
-	@Transactional
 	public List<CandidateDTO> getAllRegisterCandidate() throws SQLException {
 		List<Candidate> candidateList = registerDao.getAllRegisterCandidate();
 		CandidateHelper candidateHelper = new CandidateHelper();
@@ -32,8 +32,13 @@ public class RegisterServiceImpl implements RegisterService{
 	}
 
 	
-	@Transactional
 	public void deleteRegisterCandidate(Integer candidate) {
 		registerDao.deleteRegisterCandidate(candidate);
+	}
+
+
+	@Override
+	public Candidate findById(Integer employeeId) {
+		return registerDao.findById(employeeId);
 	}
 }
