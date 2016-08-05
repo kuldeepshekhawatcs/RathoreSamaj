@@ -126,6 +126,13 @@
 		    <artifactId>servlet-api</artifactId>
 		    <version>${servlet-api-version}</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+		    <groupId>org.json</groupId>
+		    <artifactId>json</artifactId>
+		    <version>20160212</version>
+		</dependency>
+		
 		<!-- junit -->
 	    <dependency>
 		<groupId>junit</groupId>
@@ -142,9 +149,16 @@
 	 
 	   
 	</dependencies>
-  
   <build>
-    <finalName>RathoreSamaj</finalName>
-  </build>
+    <plugins>
+        <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.7</source>
+                <target>1.7</target>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
   
 </project>

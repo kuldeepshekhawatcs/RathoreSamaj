@@ -123,7 +123,7 @@ public class RegisterController {
 	
 	
 	@RequestMapping(value = "/delete", method = RequestMethod.GET)
-	public String removeCandidate(@RequestParam("candidateId") int candidateId) throws Exception {
+	public String removeCandidate(@RequestParam("candidateid") int candidateId) throws Exception {
 	  registerService.deleteRegisterCandidate(candidateId);
 	  return "success";
 	}

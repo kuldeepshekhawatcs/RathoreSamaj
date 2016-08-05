@@ -9,5 +9,9 @@ myApp.factory('homeFactory', function($resource){
 			method : 'GET',
 			url: baseURL+'/search'
 		},
+		'deleteCandidate' : {
+			method : 'GET',
+			url: baseURL+'/delete'
+		},
 	});
 });

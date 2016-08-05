@@ -3,8 +3,15 @@ myController.controller('loginCtrl',['$scope','$location','loginFactory','$rootS
 	$scope.save = function(){
 		if($scope.loginForm.$valid){
 			$scope.input.$save({username: $scope.username, password : $scope.password},function(){
-				$location.path("/dashboard");
-				$rootScope.showLogin = false;
+				if(result.response == "success")
+				{
+					$location.path("/dashboard");
+					$rootScope.showLogin = false;
+				}
+				 else
+				{
+					 alert("Invalid User !!!"+ $scope.username);
+				}
 			});
 		}else{
 			return false;

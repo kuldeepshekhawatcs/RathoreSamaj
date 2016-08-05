@@ -1,5 +1,8 @@
 package com.society.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,9 +20,11 @@ public class UserController {
 	UserService userService;
 	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String validateUser(@RequestParam("username") String username,@RequestParam("password") String password)
+	public Map<String, String> validateUser(@RequestParam("username") String username,@RequestParam("password") String password)
 	{
-		return userService.validateUser(username,password);
+		Map<String, String> response = new HashMap<String, String>();
+		response.put("response",userService.validateUser(username,password));
+		return response;
 	}
 
 }

@@ -48,4 +48,8 @@ myController.controller('registerCtrl',['$scope','Upload','registerFactory','fil
 						}
 				});
 			}
+			$scope.resetForm = function(){
+			     $scope.input = {};
+	             $scope.registerForm.$setPristine()
+				};
 }]);
