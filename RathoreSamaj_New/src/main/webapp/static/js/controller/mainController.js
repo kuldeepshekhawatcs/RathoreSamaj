@@ -3,7 +3,7 @@ myController.controller('mainCtrl',['$scope','$rootScope','ngDialog','$location'
 	$rootScope.advertisementBlock = true;
 	
 	$scope.openLoginDialog = function(){
-		ngDialog.open({
+		$rootScope.dialog = ngDialog.open({
 		    template: 'html/login.html',
 		    controller: 'loginCtrl',
 		    closeByDocument: false,
@@ -15,5 +15,6 @@ myController.controller('mainCtrl',['$scope','$rootScope','ngDialog','$location'
 	$scope.logout = function(){
 		$rootScope.showLogin = true;
 		$location.path('/home').search('');
-	};		
+	};
+	
 }]);

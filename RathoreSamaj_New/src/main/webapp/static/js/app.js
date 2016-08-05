@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute','myController','ngResource','myServices','ngDialog','ngTable']);
+var myApp = angular.module('myApp', ['ngRoute','myController','ngResource','myServices','ngDialog','ngTable','ui.bootstrap']);
 
 var myController = angular.module('myController',['ngFileUpload']);
 

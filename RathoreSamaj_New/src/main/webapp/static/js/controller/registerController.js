@@ -5,7 +5,7 @@ myController.controller('registerCtrl',['$scope','Upload','registerFactory','fil
 			$scope.dateList = [];
 			$scope.monthList = [];
 			$scope.yearList = [];
-			
+			$scope.showmandatory = false;
 			for(var i = 1; i <= 31; i++) {
 				$scope.dateList.push({value : i});
 			};
@@ -16,23 +16,27 @@ myController.controller('registerCtrl',['$scope','Upload','registerFactory','fil
 				$scope.yearList.push({value : i});
 			};
 			$scope.save = function(){
-				var dob = $scope.date+"/"+$scope.month+"/"+$scope.year;
-				$scope.input.dob = dob;
-				var formData = new FormData();
-					 formData.append('files', $scope.picFile);
+				if($scope.registerForm.$valid){
+					var dob = $scope.date+"/"+$scope.month+"/"+$scope.year;
+					$scope.input.dob = dob;
+					var formData = new FormData();
+						 formData.append('files', $scope.picFile);
 
-				formData.append("register",angular.toJson($scope.input));
-				fileUploadService.uploadFiles('/RathoreSamaj/register/addcandidate', formData).success(function(response){
-					if(response=="success"){
-						alert("Registerd Succesfully");
-						$location.path('/home');
-					}
-				    	}).error(function(result){
-				    	});
+					formData.append("register",angular.toJson($scope.input));
+					fileUploadService.uploadFiles('/RathoreSamaj/register/addcandidate', formData).success(function(response){
+						if(response=="success"){
+							alert("Registerd Succesfully");
+							$location.path('/home');
+						}
+					    	}).error(function(result){
+					    	});
+				}else{
+					$scope.showmandatory = true;
+				}
 			};
 			
 			var searchObject = $location.search();
-			if(searchObject!=undefined && searchObject!='' && searchObject.candidateid!=''){
+			if(searchObject!=undefined && searchObject!='' && searchObject.candidateid!='' && searchObject.candidateid!=undefined){
 				registerFactory.getcandiatedetailbyid({candidateId:searchObject.candidateid}, function(result){
 						$scope.input = result;
 						var dob = result.dob;

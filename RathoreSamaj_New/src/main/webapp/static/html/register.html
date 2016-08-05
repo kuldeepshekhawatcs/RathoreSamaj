@@ -6,15 +6,17 @@
 		<div class="panelStyle">
 			<div class="row">
 				<div class="col-md-12 rowDiv">
+					<label class="col-md-12" style="color: #ff0000 !important;" ng-show="showmandatory">Please enter all mandatory * field</label>
 					<div class="form-group required">
 						<label class="col-md-4 control-label">First Name : </label>
-						<div class="col-md-5">
-							<input type="text" class="form-control"
-								ng-model="input.firstName" />
+						<div class="col-md-5" ng-class="{ 'has-error' : registerForm.firstname.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.firstname.$invalid && submitted" uib-tooltip="Please enter First Name">
+							<input type="text" class="form-control" name="firstname"
+								ng-model="input.firstName" required />
 						</div>
 					</div>
 
-					<div class="form-group required">
+					<div class="form-group ">
 						<label class="col-md-4 control-label">Middle Name : </label>
 						<div class="col-md-5">
 							<input type="text" class="form-control"
@@ -22,34 +24,38 @@
 						</div>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group required">
 						<label class="col-md-4 control-label">Last Name : </label>
-						<div class="col-md-5">
-							<input type="text" class="form-control"
-								ng-model="input.lastName" />
+						<div class="col-md-5" ng-class="{ 'has-error' : registerForm.lastname.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.lastname.$invalid && submitted" uib-tooltip="Please enter Last Name">
+							<input type="text" class="form-control" name="lastname"
+								ng-model="input.lastName" required/>
 						</div>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group required">
 						<label class="col-md-4 control-label ">Gender : </label>
-						<div class="col-md-5 radiobutton">
-						<label><input name="genderSelect" value="M" type="radio" ng-model="input.gender"/> Male</label>
-						<label><input name="genderSelect" value="F" type="radio" ng-model="input.gender"/> Female</label>
+						<div class="col-md-5 radiobutton" ng-class="{ 'has-error' : registerForm.genderSelect.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.genderSelect.$invalid && submitted" uib-tooltip="{{validateSalesYear}}">
+						<label><input name="genderSelect" value="M" type="radio" ng-model="input.gender" required/> Male</label>
+						<label><input name="genderSelect" value="F" type="radio" ng-model="input.gender" required/> Female</label>
 						</div>
 					</div>
 					
-					<div class="form-group">
+					<div class="form-group required">
 						<label class="col-md-4 control-label ">Status : </label>
-						<div class="col-md-5 radiobutton">
-						<label><input name="statusSelect" value="S" type="radio" ng-model="input.maritalStatus"/> Single</label>
-						<label><input name="statusSelect" value="M" type="radio" ng-model="input.maritalStatus"/> Married</label>
+						<div class="col-md-5 radiobutton" ng-class="{ 'has-error' : registerForm.statusSelect.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.statusSelect.$invalid && submitted" uib-tooltip="{{validateSalesYear}}">
+						<label><input name="statusSelect" value="S" type="radio" ng-model="input.maritalStatus" required/> Single</label>
+						<label><input name="statusSelect" value="M" type="radio" ng-model="input.maritalStatus" required/> Married</label>
 						</div>
 					</div>
 					
 					<div class="form-group required">
 						<label class="col-md-4 control-label">Religion :</label>
-						<div class="col-md-5">
-							<select class="form-control" ng-model="input.religion" required>
+						<div class="col-md-5" ng-class="{ 'has-error' : registerForm.religion.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.religion.$invalid && submitted" uib-tooltip="Please select Religion">
+							<select class="form-control" ng-model="input.religion" name="religion" required>
 								<option value="" >--Select---</option>
 								<option value="hindu" >Hindu</option>
 								<option value="jain" >Jain</option>
@@ -62,27 +68,33 @@
 					
 					<div class="form-group required">
 						<label class="col-md-4 control-label">Age : </label>
-						<div class="col-md-5">
-							<input type="text" class="form-control"
-								ng-model="input.age" />
+						<div class="col-md-5" ng-class="{ 'has-error' : registerForm.age.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.age.$invalid && submitted" uib-tooltip="Please enter age">
+							<input type="text" class="form-control" name="age"
+								ng-model="input.age" only-num required/>
 						</div>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group required">
 						<label class="col-md-4 control-label">D.O.B. :</label>
-						<div class="col-md-8 nopadding">
-						<div class="col-md-2" style="padding-left: 5px;margin-left: 10px;">
+						<div class="col-md-8 nopadding" >
+						<div class="col-md-2" style="padding-left: 5px;margin-left: 10px;" ng-class="{ 'has-error' : registerForm.date.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.date.$invalid && submitted" uib-tooltip="Please select date">
 							<select class="form-control" style="padding-left: 15px" ng-model="date"
-								ng-options="date.value as date.value for date in dateList"	required>
+								ng-options="date.value as date.value for date in dateList" name="date"	required>
 								<option value="" selected>DD</option>
 							</select></div> <label class="col-md-1 control-label nopadding leftLabel">DD</label>
 							
-							<div class="col-md-2 nopadding" style="padding-right: 18px;"><select class="form-control" ng-model="month"
-								ng-options="month.value as month.value for month in monthList" required>
+							<div class="col-md-2 nopadding" style="padding-right: 18px;" ng-class="{ 'has-error' : registerForm.month.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.month.$invalid && submitted" uib-tooltip="Please select month">
+             				<select class="form-control" ng-model="month"
+								ng-options="month.value as month.value for month in monthList" name="month" required>
 								<option value="" selected>MM</option>
 							</select></div> <label class="col-md-1 control-label nopadding leftLabel">MM</label>
-							<div class="col-md-2 nopadding" style="padding-right: 09px;"><select class="form-control" ng-model="year"
-								ng-options="year.value as year.value for year in yearList" required>
+							<div class="col-md-2 nopadding" style="padding-right: 09px;" ng-class="{ 'has-error' : registerForm.year.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.year.$invalid && submitted" uib-tooltip="Please select year">
+							<select class="form-control" ng-model="year"
+								ng-options="year.value as year.value for year in yearList" name="year" required>
 								<option value="" selected>YYYY</option>
 							</select></div> <label class="control-label nopadding leftLabel">YYYY</label>
 						</div>
@@ -90,35 +102,38 @@
 				<!-- </div>
 
 				<div class="col-md-6"> -->
-					<div class="form-group">
+					<div class="form-group required">
 						<label class="col-md-4 control-label">Mobile No. : </label>
-						<div class="col-md-5">
-							<input type="text" class="form-control"
-								ng-model="input.candidateMobileNumber" />
+						<div class="col-md-5" ng-class="{ 'has-error' : registerForm.mobile.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.mobile.$invalid && submitted" uib-tooltip="Please enter mobile no.">
+							<input type="text" class="form-control" name="mobile" maxlength="10"
+								ng-model="input.candidateMobileNumber" only-num required/>
 						</div>
 					</div>
 
-					<div class="form-group required">
+					<div class="form-group">
 						<label class="col-md-4 control-label">Alternate Mobile No. :</label>
-						<div class="col-md-5">
-							<input type="text" class="form-control"
-								ng-model="input.parentMobileNumber" />
+						<div class="col-md-5" >
+							<input type="text" class="form-control" maxlength="10"
+								ng-model="input.parentMobileNumber" only-num />
 						</div>
 					</div>
 
 					<div class="form-group required">
 						<label class="col-md-4 control-label">Address :</label>
-						<div class="col-md-5">
+						<div class="col-md-5" ng-class="{ 'has-error' : registerForm.address.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.address.$invalid && submitted" uib-tooltip="Please enter address">
 							<textarea id="address" 
-								class="form-control" ng-model="input.address" rows="3"
-								maxlength="100" ></textarea>
+								class="form-control" ng-model="input.address" rows="3" name="address"
+								maxlength="100" required></textarea>
 						</div>
 					</div>
 
 					<div class="form-group required">
 						<label class="col-md-4 control-label">City :</label>
-						<div class="col-md-5">
-							<select class="form-control" ng-model="input.location" required>
+						<div class="col-md-5" ng-class="{ 'has-error' : registerForm.city.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.city.$invalid && submitted" uib-tooltip="Please select city">
+							<select class="form-control" ng-model="input.location" name="city" required>
 								<option value="" >--Select---</option>
 								<option value="Bhopal" >Bhopal</option>
 								<option value="Chittorgarh" >Chittorgarh</option>
@@ -136,8 +151,9 @@
 
 					<div class="form-group required">
 						<label class="col-md-4 control-label">Education :</label>
-						<div class="col-md-5">
-							<select class="form-control" ng-model="input.education" required>
+						<div class="col-md-5" ng-class="{ 'has-error' : registerForm.education.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.education.$invalid && submitted" uib-tooltip="Please select education">
+							<select class="form-control" ng-model="input.education" name="education" required>
 								<option value="" >--Select---</option>
 								<option value="PG" >Post Graduate</option>
 								<option value="G" >Graduate</option>
@@ -148,17 +164,19 @@
 
 					<div class="form-group required">
 						<label class="col-md-4 control-label">Occupation :</label>
-						<div class="col-md-5 radiobutton">
-							<label><input name="occupationSelect" value="Profession" type="radio" ng-model="input.occupation"/> Profession</label>
-							<label><input name="occupationSelect" value="Business" type="radio" ng-model="input.occupation"/> Business</label>
-							<label><input name="occupationSelect" value="Employment" type="radio" ng-model="input.occupation"/> Employment</label>
+						<div class="col-md-5 radiobutton" ng-class="{ 'has-error' : registerForm.occupationSelect.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.occupationSelect.$invalid && submitted" uib-tooltip="Please select occupation">
+							<label><input name="occupationSelect" value="Profession" type="radio" ng-model="input.occupation" required/> Profession</label>
+							<label><input name="occupationSelect" value="Business" type="radio" ng-model="input.occupation" required/> Business</label>
+							<label><input name="occupationSelect" value="Employment" type="radio" ng-model="input.occupation" required/> Employment</label>
 						</div>
 					</div>
 
 					<div class="form-group required">
 						<label class="col-md-4 control-label">Annual Income :</label>
-						<div class="col-md-5">
-							<select class="form-control" ng-model="input.annualIncome" required>
+						<div class="col-md-5" ng-class="{ 'has-error' : registerForm.annualincome.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.annualincome.$invalid && submitted" uib-tooltip="Please select annual income">
+							<select class="form-control" ng-model="input.annualIncome" name="annualincome" required>
 								<option value="" >--Select---</option>
 								<option value="<50k" >below ₹ 50,000</option>
 								<option value="50k-2l" >₹ 50,000-2,00,000</option>
@@ -170,28 +188,31 @@
 						</div><label class="control-label">per annum</label>
 					</div>
 					
-					<div class="form-group required">
+					<div class="form-group required" >
 						<label class="col-md-4 control-label">Personel Details :</label>
 					</div>
 					
 					<div class="form-group required">
 						<label class="col-md-4 control-label">Height : </label>
-						<div class="col-md-5">
-							<input type="text" class="form-control"
-								ng-model="input.height" />
+						<div class="col-md-5" ng-class="{ 'has-error' : registerForm.height.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.height.$invalid && submitted" uib-tooltip="Please enter height">
+							<input type="text" class="form-control" name="height"
+								ng-model="input.height" required/>
 						</div>
 					</div>
 					<div class="form-group required">
 						<label class="col-md-4 control-label">LifeStyle : </label>
-						<div class="col-md-5">
-							<input type="text" class="form-control"
-								ng-model="input.lifeStyle" />
+						<div class="col-md-5" ng-class="{ 'has-error' : registerForm.lifestyle.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.lifestyle.$invalid && submitted" uib-tooltip="Please enter lifestyle">
+							<input type="text" class="form-control" name="lifestyle"
+								ng-model="input.lifeStyle" required/>
 						</div>
 					</div>
 					<div class="form-group required">
 						<label class="col-md-4 control-label">Language : </label>
-						<div class="col-md-5">
-							<select class="form-control" ng-model="input.language" required>
+						<div class="col-md-5" ng-class="{ 'has-error' : registerForm.language.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.language.$invalid && submitted" uib-tooltip="Please select mother tongue">
+							<select class="form-control" ng-model="input.language" name="language" required>
 								<option value="" >--Select---</option>
 								<option value="hindi" >Hindi</option>
 								<option value="english" >English</option>
@@ -203,29 +224,32 @@
 					</div>
 					<div class="form-group required">
 						<label class="col-md-4 control-label">Diet : </label>
-						<div class="col-md-5">
-							<label class="col-md-3"><input name="dietSelect" value="veg" type="radio" ng-model="input.diet"/> Veg</label>
-							<label class="col-md-4"><input name="dietSelect" value="jainveg" type="radio" ng-model="input.diet"/> Jain-Veg</label>
-							<label class="col-md-4"><input name="dietSelect" value="nonveg" type="radio" ng-model="input.diet"/> Non-veg</label>
-							<label class="col-md-4"><input name="dietSelect" value="eggveg" type="radio" ng-model="input.diet"/> Eggterian</label>
+						<div class="col-md-5" ng-class="{ 'has-error' : registerForm.dietSelect.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.dietSelect.$invalid && submitted" uib-tooltip="Please select diet">
+							<label class="col-md-3"><input name="dietSelect" value="veg" type="radio" ng-model="input.diet" required/> Veg</label>
+							<label class="col-md-4"><input name="dietSelect" value="jainveg" type="radio" ng-model="input.diet" required/> Jain-Veg</label>
+							<label class="col-md-4"><input name="dietSelect" value="nonveg" type="radio" ng-model="input.diet" required/> Non-veg</label>
+							<label class="col-md-4"><input name="dietSelect" value="eggveg" type="radio" ng-model="input.diet" required/> Eggterian</label>
 						</div>
 					</div>
 					<div class="form-group required">
 						<label class="col-md-4 control-label">Complexion : </label>
-						<div class="col-md-5 radiobutton">
-							<label class="col-md-4"><input name="skinSelect" value="white" type="radio" ng-model="input.complexion"/> White</label>
-							<label class="col-md-4"><input name="skinSelect" value="wheatish" type="radio" ng-model="input.complexion"/> Wheatish</label>
-							<label class="col-md-4"><input name="skinSelect" value="black" type="radio" ng-model="input.complexion"/> Black</label>
+						<div class="col-md-5 radiobutton" ng-class="{ 'has-error' : registerForm.skinSelect.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.skinSelect.$invalid && submitted" uib-tooltip="Please select complexion">
+							<label class="col-md-4"><input name="skinSelect" value="white" type="radio" ng-model="input.complexion" required/> White</label>
+							<label class="col-md-4"><input name="skinSelect" value="wheatish" type="radio" ng-model="input.complexion" required/> Wheatish</label>
+							<label class="col-md-4"><input name="skinSelect" value="black" type="radio" ng-model="input.complexion" required/> Black</label>
 						</div>
 					</div>
 			</div>
 					<div class="col-md-12 rowDiv">
 						<div class="form-group required">
 							<label class="col-md-4 control-label">Profile Picture :</label> 
-							<div class="col-md-8">
+							<div class="col-md-8" ng-class="{ 'has-error' : registerForm.file.$invalid && submitted }" tooltip-placement="top"
+             				tooltip-trigger="mouseenter" tooltip-enable="registerForm.file.$invalid && submitted" uib-tooltip="Please upload photo">
 							<input
 								type="file" ngf-select="" ng-model="picFile" name="file"
-								ngf-accept="'image/*'"> <img ngf-src="picFile"
+								ngf-accept="'image/*'" required> <img ngf-src="picFile"
 								class="thumb">
 								</div>
 						</div>
@@ -233,16 +257,11 @@
 			</div>
 			<div class="clearfix marginTop20">
 	<div class="fright">
-		<button class="callToAction" ng-click="save()">Save</button>
+		<button class="callToAction" ng-click="submitted=true;save()">Save</button>
 	</div>
 </div>
 		</div>
 <br class="clear">
-<!-- <div class="clearfix marginTop20">
-	<div class="fright">
-		<button class="callToAction" ng-click="save()">Save</button>
-	</div>
-</div> -->
 </form>
 </div>
 </div>

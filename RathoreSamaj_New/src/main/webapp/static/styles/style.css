@@ -244,3 +244,10 @@ li a:hover:not(.active) {
 .table-striped TH {
     white-space: nowrap;
 }
+
+.has-error .form-control, .has-error .cke_chrome,
+.has-error a.select2-choice 
+{
+    border-color: #ff0000 !important;
+}
+.form-group.required .control-label:after { content: " *"; color: red; font-size: 14px; }
