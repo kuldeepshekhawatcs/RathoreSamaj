@@ -15,4 +15,6 @@ myController.controller('homeCtrl',['$scope','$rootScope','homeFactory',function
 			$scope.candidateList = result.candidateDTOList;
 		});
 	}
+	
+	
 }]);

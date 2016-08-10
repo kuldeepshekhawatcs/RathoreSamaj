@@ -3,8 +3,10 @@ package com.society.controller;
 import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.beanutils.BeanPropertyValueEqualsPredicate;
 import org.apache.commons.beanutils.BeanToPropertyValueTransformer;
@@ -79,7 +81,7 @@ public class RegisterController {
 	return candidateDTO.getImage();
 }
 	
-	@RequestMapping(value = "/search", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/search", method = RequestMethod.GET)
 	  @ResponseBody
 		public CandidateDTOList searchCandidate(@RequestParam(value = "gender",required =false) String gender,@RequestParam(value= "fromAge",required =false) String fromAge,@RequestParam(value = "toAge",required =false) String toAge,@RequestParam(value = "annualIncome",required =false) String annualIncome,@RequestParam(value ="location",required =false) String location) throws Exception {
 		CandidateDTOList response = new CandidateDTOList();
@@ -120,12 +122,29 @@ public class RegisterController {
 		 response.setCandidateDTOList(responseList);
 		 return response;
 	}
+	*/
 	
+	@RequestMapping(value = "/search", method = RequestMethod.GET)
+	   @ResponseBody
+	  public CandidateDTOList searchCandidate(@RequestParam(value = "gender",required =false) String gender,@RequestParam(value= "fromAge",required =false) String fromAge,@RequestParam(value = "toAge",required =false) String toAge,@RequestParam(value = "annualIncome",required =false) String annualIncome,@RequestParam(value ="location",required =false) String location) throws Exception {
+	  CandidateDTOList response = new CandidateDTOList();
+	  
+	  List<Candidate> candidates = registerService.searchCandidate(gender, fromAge, toAge, annualIncome, location);
+	  if(candidates != null && !candidates.isEmpty())
+	  {
+	   response.setCandidateDTOList(CandidateHelper.convertCandidateEntitytoDTO(candidates));
+	  }
+	  
+	   
+	   return response;
+	 }
 	
 	@RequestMapping(value = "/delete", method = RequestMethod.GET)
-	public String removeCandidate(@RequestParam("candidateid") int candidateId) throws Exception {
-	  registerService.deleteRegisterCandidate(candidateId);
-	  return "success";
+	public Map<String, String> removeCandidate(@RequestParam("candidateid") int candidateId) throws Exception {
+		  Map<String, String> response = new HashMap<String, String>();
+		  registerService.deleteRegisterCandidate(candidateId);
+		  response.put("response","success");
+		  return response;
 	}
 	
 	

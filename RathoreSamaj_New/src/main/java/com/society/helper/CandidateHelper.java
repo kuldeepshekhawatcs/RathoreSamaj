@@ -9,7 +9,7 @@ import com.society.dto.CandidateDTO;
 
 public class CandidateHelper {
 
-	public List<CandidateDTO> convertCandidateEntitytoDTO(List<Candidate> candidateList) throws SQLException {
+	public static List<CandidateDTO> convertCandidateEntitytoDTO(List<Candidate> candidateList) throws SQLException {
 		List<CandidateDTO> candidateDTOList = new ArrayList<CandidateDTO>();
 		if(candidateList!=null && candidateList.size()>0){
 			for(Candidate candidate: candidateList){
@@ -20,7 +20,7 @@ public class CandidateHelper {
 		return candidateDTOList;
 	}
 
-	public CandidateDTO convertCandidateToCandidateDTO(Candidate candidate)throws SQLException {
+	public static CandidateDTO convertCandidateToCandidateDTO(Candidate candidate)throws SQLException {
 		CandidateDTO candidateDTO = new CandidateDTO();
 		candidateDTO.setId(candidate.getId());
 		if(candidate.getFirstName()!=null){

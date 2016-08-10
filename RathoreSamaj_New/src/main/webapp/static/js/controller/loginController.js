@@ -2,7 +2,7 @@ myController.controller('loginCtrl',['$scope','$location','loginFactory','$rootS
 	$scope.input = new 	loginFactory();
 	$scope.save = function(){
 		if($scope.loginForm.$valid){
-			$scope.input.$save({username: $scope.username, password : $scope.password},function(){
+			$scope.input.$save({username: $scope.username, password : $scope.password},function(result){
 				if(result.response == "success")
 				{
 					$location.path("/dashboard");

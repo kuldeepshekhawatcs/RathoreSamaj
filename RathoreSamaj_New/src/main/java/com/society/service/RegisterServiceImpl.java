@@ -41,4 +41,11 @@ public class RegisterServiceImpl implements RegisterService{
 	public Candidate findById(Integer employeeId) {
 		return registerDao.findById(employeeId);
 	}
+
+
+	@Override
+	public List<Candidate> searchCandidate(String gender, String fromAge,
+			   String toAge, String annualIncome, String location) {
+			  return registerDao.searchCandidate(gender, fromAge, toAge, annualIncome, location);
+			 }
 }

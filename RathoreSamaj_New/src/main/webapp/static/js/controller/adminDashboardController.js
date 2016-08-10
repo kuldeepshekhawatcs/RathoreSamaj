@@ -34,8 +34,20 @@ myController.controller('adminDashBoardCtrl',['$scope','$rootScope','NgTablePara
     	}
     	
     	$scope.deleteData = function(id){
-     	   // send request to delete data
-    		alert("Under Construction!!!!")   	   
+    		homeFactory.deleteCandidate({candidateid: id},function(result){
+				if(result.response == "success")
+				{
+					alert("Successfully Deleted!!!");
+					$scope.loadData();
+				}
+				 else
+				{
+					 alert("Something went Wrong !!!");
+				}
+    		}
+    		
+    		);
+    		
      	}
     
     	$scope.showConfirm = function() {

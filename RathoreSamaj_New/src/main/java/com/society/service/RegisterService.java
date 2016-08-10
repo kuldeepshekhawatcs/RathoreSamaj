@@ -13,4 +13,5 @@ public interface RegisterService {
     public List<CandidateDTO> getAllRegisterCandidate() throws SQLException;
     public void deleteRegisterCandidate(Integer candidate);
     public Candidate findById(Integer employeeId);
+    public List<Candidate> searchCandidate( String gender, String fromAge, String toAge, String annualIncome, String location) ;
 }

@@ -30,7 +30,7 @@ footer, .main:after {
 .footer a:hover { color: #ccc; }
 .footer a span { color: #ccc; }
 .main-content {
-	margin-top: 20px;
+	
 }
 
 .col-md-6{
@@ -39,7 +39,7 @@ footer, .main:after {
 
 #home-menu-container{margin-bottom: -15px;}
 
-button.callToAction { background-color: #0080c0; color: #fff; border: 0; border-bottom: 3px solid #bc7c15; height: 38px;}
+button.callToAction { background-color: #0080c0; color: #fff; border: 0; border-bottom: 3px solid #bc7c15; height: 31px;}
 button.callToAction:hover { background-color: #42a591; border-bottom-color: #388979; }
 
 .fleft { text-align: -webkit-center; }
@@ -185,7 +185,7 @@ ul {
     background-color: #f1f1f1;
     height: 100%;
     overflow: auto;
-    margin-left: -17px;
+   
 }
  .frame {
             height: 49px;
