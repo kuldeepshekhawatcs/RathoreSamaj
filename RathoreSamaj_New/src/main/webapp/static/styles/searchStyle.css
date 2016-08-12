@@ -85,7 +85,7 @@ a:hover { font-size:12px; text-decoration:none; color:#0035bb;}
 .smnhfooter ul li a:hover {text-decoration:none; color:#0035bb;}
 
 
-.smnhsrchform {overflow:hidden; float:left; text-align:left; border: 1px solid #ffffff;padding: 0px 30px; height: 80px;}
+.smnhsrchform {overflow:hidden; float:left; text-align:left; border: 1px solid #ffffff;padding: 0px 20px; height: 80px;width:20%}
 .smnhsrchform label {font-size:13px;}
 .smnhsrchform span { float:left; margin:18px 5px; text-transform:lowercase}
 .smnhsrchform:last-child{ border-right:none !important; padding-right:39px !important}
@@ -97,6 +97,6 @@ a:hover { font-size:12px; text-decoration:none; color:#0035bb;}
   
 .smnhsrchbtn {font-size: 18px; font-weight: bold; color: #fff; text-shadow: 0 0 2px #003c54; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; background-color: #249bcc; -webkit-box-shadow: 0 3px 3px #565656; -moz-box-shadow: 0 3px 3px #565656; box-shadow: 0 3px 3px #565656; border: solid 1px #007eb5; background-image: -webkit-linear-gradient(bottom, #158dc2, #45bae0); background-image: -moz-linear-gradient(bottom, #158dc2, #45bae0); background-image: -o-linear-gradient(bottom, #158dc2, #45bae0); background-image: -ms-linear-gradient(bottom, #158dc2, #45bae0); 	background-image: linear-gradient(to top, #158dc2, #45bae0); padding:6px 15px 6px 15px; float:left; margin:20px 0 10px 107px;}
 
-
+.smnhsrchformpadding {padding-top: 7px;padding-left: 50px;}
 
 

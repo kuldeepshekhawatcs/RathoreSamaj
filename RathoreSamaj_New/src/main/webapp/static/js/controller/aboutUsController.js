@@ -1,5 +1,5 @@
-myController.controller('aboutUsCtrl',['$scope',function($scope){
-	
+myController.controller('aboutUsCtrl',['$scope','$rootScope',function($scope,$rootScope){
+	$rootScope.advertisementBlock = true;
 			
 			
 }]);

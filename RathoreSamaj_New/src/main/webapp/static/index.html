@@ -70,9 +70,9 @@
         <div class="container-fluid">
           <div id="navbar" class="navbar-collapse collapse" style="float: right; ">
             <ul class="nav navbar-nav" style="background-color: #e3eff5;">
-              <li class="active" ><a href="#/aboutus" style="color:#FAAE47">Home</a></li>
+              <li class="active" ><a href="#/myhome" style="color:#FAAE47">Home</a></li>
               <li><a href="#/register" style="color:#FAAE47">Register</a></li>
-              <li><a href="#/home.html" style="color:#FAAE47">Matrimony</a></li>
+              <li><a href="#/home" style="color:#FAAE47">Matrimony</a></li>
               <li ng-show="showLogin"><a ng-click="openLoginDialog()" style="color:#FAAE47">Admin Login</a></li>
                <li ng-show="!showLogin"><a ng-click="logout()" style="color:#FAAE47">Logout</a></li>  
             </ul>
@@ -86,7 +86,7 @@
 				 <div class="col-md-12" ng-if="!advertisementBlock">
 					<div ng-view></div>
 				</div> 
-				<div class="col-md-2" style="border: 1px solid; border-color: black; height: 579px; width:190px; padding-left: 0%;" ng-if="advertisementBlock">
+				<div class="col-md-2 advertisementparent" ng-if="advertisementBlock">
 					 <div class="advertisement">
 						Advertisement block <!-- behavior="scroll" --> 
 						<marquee behavior="alternate" direction="down" class="advertisement">

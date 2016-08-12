@@ -1,5 +1,5 @@
 myController.controller('homeCtrl',['$scope','$rootScope','homeFactory',function($scope,$rootScope,homeFactory){
-	$rootScope.advertisementBlock = true;
+	$rootScope.advertisementBlock = false;
 	homeFactory.get(function(result){
 		$scope.candidateList = result.candidateDTOList;
 	});

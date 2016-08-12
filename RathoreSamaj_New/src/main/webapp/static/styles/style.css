@@ -43,7 +43,9 @@ button.callToAction { background-color: #0080c0; color: #fff; border: 0; border-
 button.callToAction:hover { background-color: #42a591; border-bottom-color: #388979; }
 
 .fleft { text-align: -webkit-center; }
-.fright { float: right; padding-top: 20px;}
+.fright {     float: right;
+    padding-top: 25px;
+    padding-right: 30px;}
 
 #homeNavbar{border: 1px solid;}
 
@@ -95,6 +97,15 @@ button.callToAction:hover { background-color: #42a591; border-bottom-color: #388
     line-height: 1.42857143;
     vertical-align: top;
 	border: none;
+}
+
+.advertisementparent{
+	border: 1px solid;
+    border-color: black;
+    height: 579px;
+    width: 210px;
+    padding-left: 0%;
+    margin-left: -20px;
 }
 
 .advertisement{
@@ -251,3 +262,4 @@ li a:hover:not(.active) {
     border-color: #ff0000 !important;
 }
 .form-group.required .control-label:after { content: " *"; color: red; font-size: 14px; }
+

@@ -3,27 +3,19 @@ $routeProvider.when('/home', {
         templateUrl: 'html/home.html',
         controller: 'homeCtrl'
     });
-    $routeProvider.when('/aboutus', {
+    $routeProvider.when('/myhome', {
         templateUrl: 'html/myhome.html',
-       
+        controller : 'aboutUsCtrl'
     });
     $routeProvider.when('/register', {
         templateUrl: 'html/register.html',
         controller: 'registerCtrl'
-    });
-    $routeProvider.when('/mission', {
-        templateUrl: 'html/mission.html',
-        controller: 'missionCtrl'
-    });
-    $routeProvider.when('/mission', {
-        templateUrl: 'html/mission.html',
-        controller: 'missionCtrl'
     });
     $routeProvider.when('/dashboard', {
         templateUrl: 'html/dashboard.html',
         controller: 'adminDashBoardCtrl'
     });
     $routeProvider.otherwise({
-		redirectTo : '/home'
+		redirectTo : '/myhome'
 	});
 }]);

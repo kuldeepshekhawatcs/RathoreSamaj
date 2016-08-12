@@ -20,11 +20,11 @@
 <div class="smnhsrchsec">
 		<form id="searchCriteriaForm">
 		<div class="smnhsrchform">
-		<div style="padding-top: 5px;">
+		<div class="smnhsrchformpadding">
 	<input name="genderSelect" value="M" type="radio" ng-model="gender"/><label class="searchLebel" style="padding-right: 16px">Male</label></div>
 	  <div class="clr"></div>
 	  <div></div>
-	<div style="padding-top: 10px;"><input name="genderSelect" value="F" type="radio" ng-model="gender"/><label class="searchLebel">Female</label></div>
+	<div class="smnhsrchformpadding"><input name="genderSelect" value="F" type="radio" ng-model="gender"/><label class="searchLebel">Female</label></div>
  <div class="searchGender">
  	<div>
 	<input name="genderSelect" value="MALE" type="radio" onChange="updateAge('MALE');"/></div>
@@ -37,13 +37,13 @@
 	<label class="searchLebel">Age</label>
     <div class="clr"></div>
 
-	<div class="styled-select" style="width:37px; float:left"><select class="form-control" ng-model="fromAge" style="width:45px;" ng-options="age.value as age.value for age in ageList">
+	<div class="styled-select" style="width:50px; float:left"><select class="form-control" ng-model="fromAge" style="width:45px;" ng-options="age.value as age.value for age in ageList">
 			<option value="" selected>--</option>
 		</select></div>
 	
 		 <span>to</span>
 
-   <div class="styled-select" style="width:37px; float:left">
+   <div class="styled-select" style="width:50px; float:left">
     <select class="form-control" ng-model="toAge" ng-options="age.value as age.value for age in ageList">
     <option value="" selected>--</option>
 		</select></div>
@@ -54,9 +54,6 @@
 <div class="smnhsrchform">
 	<label class="searchLebel">Annual Income</label>
     <div class="styled-select">
-	<select id="religionSelect" name="religions" onChange="updateCaste();" class="qsselect">
-		<option selected="selected" value="DONM">Select</option>
-		</select>
 		<select class="form-control" ng-model="annualIncome" >
 								<option value="" >--Select---</option>
 								<option value="<50k" >below ₹ 50,000</option>
@@ -118,6 +115,7 @@
 									{{candidate.age}}
 							</div>
 						</div>
+						<div class="col-md-10"> </div>
 						<div class="col-md-10">
 							<label class="col-md-2 control-label">Gender:</label> 
 							<div class="col-md-3">
